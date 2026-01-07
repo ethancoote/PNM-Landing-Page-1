@@ -1,16 +1,747 @@
 ---
-
+import '../styles/reset.css';
+import '../styles/main.css';
+import '../styles/fonts.css';
+import '../styles/portfolio.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+//import Gtag from "../components/Gtag.astro";
+//import Heatmap from "../components/Heatmap.astro";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/images/logo.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+        <meta name="description" content="Trusted painters in Niagara and Oakville Ontario.">
+		<title>Painters Near Me</title>
+
+		<style>
+
+			@font-face {
+				font-display: swap;
+				font-family: 'Manrope';
+				font-style: normal;
+				font-weight: 400;
+				src: url('/fonts/manrope-v20-latin-regular.woff2') format('woff2');
+			}
+			@font-face {
+				font-display: swap;
+				font-family: 'Roboto';
+				font-style: normal;
+				font-weight: 700;
+				src: url('/fonts/manrope-v20-latin-700.woff2') format('woff2');
+			}
+    	</style>
+        
+        <link rel="preload" fetchpriority="high" href="/images/mobile/mockup.webp" as="image" media="(max-width: 480px)">
+        <link rel="preload" fetchpriority="high" href="/images/mockup.webp" as="image" media="(min-width: 481px)">
+        <link rel="preload" href="/images/cssLogo.webp" as="image">
+        <link rel="preload" href="/images/htmlLogo.webp" as="image">
+        <link rel="preload" href="/images/jsLogo.webp" as="image">
+        <link rel="preload" href="/images/astroLogo.webp" as="image">
+        <!--Gtag />
+        <Heatmap /-->
 	</head>
 	<body>
-		<h1>Astro</h1>
+
+	<Header />
+
+	<!--HERO-->
+    <main id="home" class="normalSection hero">
+        <div class="container close">
+            <div class="box hero">
+                
+                <div class="box acrossTrue centerMobile">
+                    <img class="icon square" src="images/htmlLogo.webp" alt="html logo">
+                    <img class="icon square" src="images/cssLogo.webp" alt="css logo">
+                    <img class="icon square" src="images/jsLogo.webp" alt="js logo">
+                    <img class="icon square" src="images/astroLogo.webp" alt="astro logo">
+                </div>
+                
+                <h1 id="headline">Professional Websites<br><span class="color">For Service Businesses</span></h1>
+                <p id="subHeadline" class="subtextBlack">Cold calling, emailing, and Facebook <i>can</i> get you clients, but it's inconsistent and time consuming. Don’t waste time and money looking for leads. Let your customers come to you.</p>
+                <div id="heroButtons" class="box across close mobile8Gap">
+                    <a href="#contact" class="button main"><p class="buttonText">Get Started</p>
+                        <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svgArrow" d="M18.7071 8.07107C19.0976 7.68055 19.0976 7.04739 18.7071 6.65686L12.3431 0.2929C11.9526 -0.0976242 11.3195 -0.0976242 10.9289 0.2929C10.5384 0.683424 10.5384 1.31659 10.9289 1.70711L16.5858 7.36397L10.9289 13.0208C10.5384 13.4113 10.5384 14.0445 10.9289 14.435C11.3195 14.8256 11.9526 14.8256 12.3431 14.435L18.7071 8.07107ZM0 7.36397L0 8.36397L18 8.36397V7.36397V6.36397L0 6.36397L0 7.36397Z"/></svg>
+                    </a>
+                    <a href="#learn" class="button secondary"><p class="buttonText">Learn More</p>
+                        <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svgArrow" d="M18.7071 8.07107C19.0976 7.68055 19.0976 7.04739 18.7071 6.65686L12.3431 0.2929C11.9526 -0.0976242 11.3195 -0.0976242 10.9289 0.2929C10.5384 0.683424 10.5384 1.31659 10.9289 1.70711L16.5858 7.36397L10.9289 13.0208C10.5384 13.4113 10.5384 14.0445 10.9289 14.435C11.3195 14.8256 11.9526 14.8256 12.3431 14.435L18.7071 8.07107ZM0 7.36397L0 8.36397L18 8.36397V7.36397V6.36397L0 6.36397L0 7.36397Z"/></svg>
+                    </a>
+                </div>
+                <div id="tagsDesktop" class="box close centerMobile across">
+                    <div class="box acrossTrue closer centerAlign tag dark shrink visCenter">
+                        <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32">
+                        <p>Bug-Fix Guarantee</p>
+                    </div>
+                    <div class="box acrossTrue closer centerAlign tag dark shrink visCenter">
+                        <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32">
+                        <p>14-Day Delivery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box closer center">
+                <picture>
+                    <source srcset="images/mobile/mockup.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img class="normalImg sixteenByNine" id="heroImage2" src="images/mockup.webp" alt="mockup of a website on different screen sizes" fetchpriority="high" loading="eager">
+                </picture>
+                
+            </div>
+            <div id="tagsMobile" class="box close centerMobile across">
+                    <div class="box acrossTrue closer centerAlign tag dark shrink visCenter">
+                        <img class="iconSmall" src="images/check.svg" alt="checkmark icon">
+                        <p>Bug-Fix Guarantee</p>
+                    </div>
+                    <div class="box acrossTrue closer centerAlign tag dark shrink visCenter">
+                        <img class="iconSmall" src="images/check.svg" alt="checkmark icon" >
+                        <p>14-Day Delivery</p>
+                    </div>
+                </div>
+        </div>
+		<style>
+            #subHeadline {
+                text-wrap: auto;
+            }
+
+			@media only screen and (max-width: 900px){
+				#tagsDesktop {
+					display: none;
+				}
+                #tagsMobile {
+                    display: flex;
+                }
+			}
+            @media only screen and (min-width: 901px) {
+                #tagsDesktop {
+					display: flex;
+				}
+                #tagsMobile {
+                    display: none;
+                }
+            }
+			
+		</style>
+    </main>
+
+    <!--PORTFOLIO-->
+    <section class="normalSection close" id="portfolio">
+        <div class="container noPaddingBot">
+            <div class="box center"><h2 class="pSmall thin darkBack tag">Portfolio</h2></div>
+        </div>
+        <div class="noPaddingBot lightPaddingTop container closeish acrossTrue">
+
+            <div class="divider mobileHide"></div>
+            <div class="box center">
+                <h2>Recent Projects</h2>
+            </div>
+            
+            <div class="divider mobileHide"></div>
+
+        </div>
+        <div class="lightbox">
+            
+            <img id="lightboxImg" src="images/portfolio/apexFull.webp" alt="homepage image" loading="lazy">
+            <div id="lightboxClose">
+                <img class="icon" src="images/close.png" alt="close X">
+            </div>
+        </div>
+        <div class="container grid top apart noPaddingTop closeish">
+            <div class="box closer portfolioItem margin16">
+                <div class="box relative">
+                    <div class="hoverTextBox">
+                        <p class="hoverText pLarge">+<br>Design Preview</p>
+                    </div>
+                    <picture>
+                        <source srcset="../images/portfolio/mobile/trueauto.webp" media="(min-width: 0px) and (max-width: 480px)">
+                        <img class="normalImg outline fourByThree" src="../images/portfolio/trueauto.webp" alt="true auto detailing homepage mockup" loading="lazy" width="400" height="300">
+                    </picture>
+                    
+                </div>
+                <div class="box closest">
+                    <div class="box acrossTrue apart">
+                        <p class="pLarge black">True Auto Detailing</p>
+                        <p class="subtextBlack">01/2026</p>
+                    </div>
+                    <p class="subtextBlack">Design & Development</p>
+                </div>
+            </div>
+            <div class="box closer portfolioItem margin16">
+                <div class="box relative">
+                    <div class="hoverTextBox">
+                        <p class="hoverText pLarge">+<br>Design Preview</p>
+                    </div>
+                    <picture>
+                        <source srcset="../images/portfolio/mobile/chalkie.webp" media="(min-width: 0px) and (max-width: 480px)">
+                        <img class="normalImg outline fourByThree" src="../images/portfolio/chalkie.webp" alt="Chalkie AI homepage mockup" loading="lazy" width="400" height="300">
+                    </picture>
+                    
+                </div>
+                <div class="box closest">
+                    <div class="box acrossTrue apart">
+                        <p class="pLarge black">Chalkie AI</p>
+                        <p class="subtextBlack">12/2025</p>
+                    </div>
+                    <p class="subtextBlack">SEO & Performance Optimization</p>
+                </div>
+            </div>
+            <div class="box closer portfolioItem margin16">
+                <div class="box relative">
+                    <div class="hoverTextBox">
+                        <p class="hoverText pLarge">+<br>Design Preview</p>
+                    </div>
+                    <picture>
+                        <source srcset="../images/portfolio/mobile/nycurls.webp" media="(min-width: 0px) and (max-width: 480px)">
+                        <img class="normalImg outline fourByThree" src="../images/portfolio/nycurls.webp" alt="NY-Curls homepage mockup" loading="lazy" width="400" height="300">
+                    </picture>
+                    
+                </div>
+                <div class="box closest">
+                    <div class="box acrossTrue apart">
+                        <p class="pLarge black">NY Curls</p>
+                        <p class="subtextBlack">12/2025</p>
+                    </div>
+                    <p class="subtextBlack">Design and Development</p>
+                </div>
+            </div>
+            <div class="box closer portfolioItem margin16">
+                <div class="box relative">
+                    <div class="hoverTextBox">
+                        <p class="hoverText pLarge">+<br>Design Preview</p>
+                    </div>
+                    <picture>
+                        <source srcset="../images/portfolio/mobile/bim.webp" media="(min-width: 0px) and (max-width: 480px)"> 
+                        <img class="normalImg outline fourByThree" src="../images/portfolio/bim.webp" alt="The BIM Builders homepage mockup" loading="lazy" width="400" height="300">
+                    </picture>
+                    
+                </div>
+                
+                <div class="box closest">
+                    <div class="box acrossTrue apart">
+                        <p class="pLarge black">The BIM Builders</p>
+                        <p class="subtextBlack">11/2025</p>
+                    </div>
+                    <p class="subtextBlack">Bug Fixes and UI Updates</p>
+                </div>
+            </div>
+            <div class="box closer portfolioItem margin16">
+                <div class="box relative">
+                    <div class="hoverTextBox">
+                        <p class="hoverText pLarge">+<br>Design Preview</p>
+                    </div>
+                    <picture>
+                        <source srcset="../images/portfolio/mobile/kansasvc.webp" media="(min-width: 0px) and (max-width: 480px)">
+                        <img class="normalImg outline fourByThree" src="../images/portfolio/kansasvc.webp" alt="The Kansas VC homepage mockup" loading="lazy" width="400" height="300">
+                    </picture>
+                    
+                </div>
+                
+                <div class="box closest">
+                    <div class="box acrossTrue apart">
+                        <p class="pLarge black">Kansas Vet Clinic</p>
+                        <p class="subtextBlack">11/2025</p>
+                    </div>
+                    <p class="subtextBlack">Design & Development</p>
+                </div>
+            </div>
+            <div class="box closer portfolioItem margin16">
+                
+                <div class="box relative">
+                    <div class="hoverTextBox">
+                        <p class="hoverText pLarge">+<br>Design Preview</p>
+                    </div>
+                    <picture>
+                        <source srcset="../images/portfolio/mobile/apex.webp" media="(min-width: 0px) and (max-width: 480px)">
+                        <img class="normalImg outline fourByThree" src="../images/portfolio/apex.webp" alt="apex auto homepage mockup" loading="lazy" width="400" height="300">
+                    </picture>
+                    
+                </div>
+                
+                <div class="box closest">
+                    <div class="box acrossTrue apart">
+                        <p class="pLarge black">Apex Auto</p>
+                        <p class="subtextBlack">10/2025</p>
+                    </div>
+                    <p class="subtextBlack">Design & Development</p>
+                </div>
+            </div>
+            <div class="box closer portfolioItem margin16">
+                
+                <div class="box relative">
+                    <div class="hoverTextBox">
+                        <p class="hoverText pLarge">+<br>Design Preview</p>
+                    </div>
+                    <picture>
+                        <source srcset="../images/portfolio/mobile/greenway.webp" media="(min-width: 0px) and (max-width: 480px)">
+                        <img class="normalImg outline fourByThree" src="../images/portfolio/greenway.webp" alt="apex auto homepage mockup" loading="lazy" width="400" height="300">
+                    </picture>  
+                    
+                </div>
+                
+                <div class="box closest">
+                    <div class="box acrossTrue apart">
+                        <p class="pLarge black">Greenway Landscaping</p>
+                        <p class="subtextBlack">10/2025</p>
+                    </div>
+                    <p class="subtextBlack">Design & Development</p>
+                </div>
+            </div>
+            <div class="box closer portfolioItem margin16">
+                <div class="box relative">
+                    <div class="hoverTextBox">
+                        <p class="hoverText pLarge">+<br>Design Preview</p>
+                    </div>
+                    <picture>
+                        <source srcset="../images/portfolio/mobile/elevate.webp" media="(min-width: 0px) and (max-width: 480px)">
+                        <img class="normalImg outline fourByThree" src="../images/portfolio/elevate.webp" alt="elevate homes homepage mockup" loading="lazy" width="400" height="300">
+                    </picture>
+                    
+                </div>
+                
+                <div class="box closest">
+                    <div class="box acrossTrue apart">
+                        <p class="pLarge black">Elevate Homes</p>
+                        <p class="subtextBlack">10/2025</p>
+                    </div>
+                    <p class="subtextBlack">Design & Development</p>
+                </div>
+            </div>
+            <div class="box closer portfolioItem margin16">
+                <div class="box relative">
+                    <div class="hoverTextBox">
+                        <p class="hoverText pLarge">+<br>Design Preview</p>
+                    </div>
+                    <picture>
+                        <source srcset="../images/portfolio/mobile/arlo.webp" media="(min-width: 0px) and (max-width: 480px)">
+                        <img class="normalImg outline fourByThree" src="../images/portfolio/arlo.webp" alt="Alro homepage mockup" loading="lazy" width="400" height="300">
+                    </picture>
+                    
+                </div>
+                
+                <div class="box closest">
+                    <div class="box acrossTrue apart">
+                        <p class="pLarge black">Arlo Vega Portfolio</p>
+                        <p class="subtextBlack">09/2025</p>
+                    </div>
+                    <p class="subtextBlack">Design & Development</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container noPaddingTop lightPaddingBot">
+            <div class="divider"></div>
+        </div>
+    </section>
+
+    <!--Performance-->
+    <section class="normalSection" id="learn">
+        <div class="container" >
+            <div class="box">
+                <picture>
+                    <source srcset="images/mobile/performance.webp" media="(max-width:480px)">
+                    <img id="performance" class="normalImg square" src="images/performance.webp" alt="pagespeed insights high performing webpage" loading="lazy" >
+                </picture>
+                
+            </div>
+            <div class="box">
+                <h3>Fast, Custom Coded Websites</h3>
+                <div class="box text">
+                    <p>Website builders and frameworks can make cool websites, but they come at the cost of performance. <b>Slow load times will lose you customers.</b></p>
+                    <p>A page that loads in 3 seconds immediately loses 8% of visitors. A page that loads in 5 seconds immediately loses 38% of visitors. </p>
+                    <p>You might not even realize there’s a problem, but you’ll be losing customers before they even see your site.</p> 
+                    <p>That's why I build custom coded websites using HTML, CSS, JavaScript, and the Astro Framework. I guarantee an average desktop load time of <b>2 seconds or lower</b> for all custom coded sites.</p>
+                </div>
+                
+            </div>
+        </div>  
+    </section> 
+
+    <!--SEO-->
+    <section class="normalSection">
+        <div class="container mobileFlip">
+            
+            <div class="box">
+                <h3>Search Engine Optimization</h3>
+                <div class="box text">
+                    <p>Your website should be the foundation for you to build your business on. Without a strong foundation, all other SEO techniques will fail. That's why all my website packages come with a full on-page and technical SEO setup.</p>
+                    <p>You need your website to be the bedrock of your SEO strategies. Give yourself the opportunity to scale without wondering if your website is holding you back.</p>
+                </div>
+                
+            </div>
+            <div class="box">
+                <picture>
+                    <source srcset="images/mobile/ahrefs.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img class="normalImg sixteenByNine" src="images/ahrefs.webp" alt="ahrefs seo dashboard" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <!--Price-->
+    <section id="pricing" class="normalSection closeish">
+        <div class="gradientBG"></div>
+        <div class="container noPaddingBot">
+            <div class="box center"><h2 class="pSmall thin tag">Packages</h2></div>
+        </div>
+        <div class="container close center noPaddingTop" >    
+            <div class="box fill small center card outline">
+                <div class="box limit" >
+                    <div class="box">
+                        <h2 class="p thin color">High Converting Landing Page</h2>
+                        <p><b class="h2">CAD$599</b></p>
+
+                    </div>
+                    <div class="box close">
+                        <p><i>What's Included:</i></p>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall " src="images/check.svg" alt="checkmark icon" width="32" height="32" loading="lazy">
+                            <p>Conversion Focused Landing Page</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Fully Responsive</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32" loading="lazy">
+                            <p>Technical SEO Setup</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32" loading="lazy">
+                            <p>Copywriting</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32" loading="lazy">
+                            <p>Branded With Your Logo & Assets</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32" loading="lazy">
+                            <p>Linked to Your Social Media</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Custom Contact Form</p>
+                        </div>
+                        
+                    </div><br>
+                    
+                    <a href="#contact" class="button secondary fill"><p>Get Started</p></a>
+                </div>
+            </div>
+            <div class="box fill small center card highlight">
+                <div class="box limit" >
+                    <div class="box">
+                        <h2 class="p thin color">Service Business Website Package</h2>
+                        <p><b class="h2">CAD$999</b></p>
+
+                    </div>
+                    <div class="box close">
+                        <p><i>What's Included:</i></p>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall " src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>5 Page Custom Website</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>On Page & Technical SEO Setup</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Fully Responsive</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Full Site Copywriting</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Branded With Your Logo & Assets</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Linked to Your Social Media</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Custom Contact Form</p>
+                        </div>
+                    </div><br>
+                    
+                    <a href="#contact" class="button main fill"><p>Get Started</p></a>
+                </div>
+                
+            </div> 
+            <div class="box fill small center card outline">
+                <div class="box limit" >
+                    <div class="box">
+                        <h2 class="p thin color">Don't Fit in a Box?</h2>
+                        <p><b class="h2">CAD$2999+</b></p>
+
+                    </div>
+                    <div class="box close">
+                        <p><i>What's Included:</i></p>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall " src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Full Custom Website</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Fully Responsive</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>On Page & Technical SEO Setup</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Full Site Copywriting</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Branded With Your Logo & Assets</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Linked to Your Social Media</p>
+                        </div>
+                        <div class="box acrossTrue close textLeft">
+                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Custom Contact Form</p>
+                        </div>
+                    </div><br>
+                    
+                    <a href="#contact" class="button secondary fill"><p>Get In Touch</p></a>
+                </div>
+                
+            </div> 
+        </div>
+    </section>
+
+    <!--ABOUT-->
+    <section id="about" class="normalSection closeish">
+        <div class="container lightPaddingBot">
+            <div class="box center"><h2 class="pSmall thin tag darkBack">About</h2></div>
+        </div>
+        <div class="container apart noPaddingTop">
+            <div class="box limit500">
+                <picture class="square" id="profileImg">
+                    <source srcset="images/mobile/profile.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img  class="normalImg square" src="images/profile.webp" alt="profile picture of Ethan Coote" loading="lazy">
+                </picture>
+                
+            </div>
+            <div class="box closest">
+                <h3>Ethan Coote</h3>
+                <h4 class="p thin">Web Developer</h4><br><br>
+                
+                <div class="box text">
+                    <p>Hey, my name's Ethan. I'm a Canadian web developer living in Guelph, Ontario.</p>
+                    <p>I build simple websites with a strong focus on performance and conversion optimization. I’ve been building websites for years, and started my business as a freelancer in 2025. Feel free to reach out if you have any questions, or you’d like a custom quote.</p>
+                    
+                    <div class="box closest">
+                        <p class="pSmall"><b>Bachelor of Computing</b><br>Major in Computer Science | Minor in Business</p>
+                        <p class="pSmall">University of Guelph | 2019 - 2024</p>
+                    </div>
+                    <div class="box acrossTrue">
+                        <img class="icon square" src="images/htmlLogo.webp" alt="html logo">
+                        <img class="icon square" src="images/cssLogo.webp" alt="css logo">
+                        <img class="icon square" src="images/jsLogo.webp" alt="js logo">
+                        <img class="icon square" src="images/astroLogo.webp" alt="astro logo">
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+	<!-- FAQ -->
+	<section class="normalSection closeish">
+		<div class="container noPaddingBot">
+            <div class="box center"><h2 class="pSmall thin tag darkBack">FAQs</h2></div>
+        </div>
+		<div class="container noPaddingTop noPaddingBot">
+            <div class="divider mobileHide"></div>
+			<div class="box center">
+				<h3 class="h2">Frequently Asked Questions</h3>
+			</div>
+            <div class="divider mobileHide"></div>
+		</div>
+		<div class="container lightPaddingTop top mobile8Gap">
+			<div class="box closer">
+                <details name="accordion1">
+					<summary class="box acrossTrue apart">
+						<p class="pLarge">Do you handle hosting?</p>
+					</summary>
+					<div class="answer">
+						<p class="subtextBlack">Yes. For hosting I charge $20CAD/month for landing pages, and $30CAD/month for standard sites. If you pay annually, you get the first 3 months of hosting free.</p>
+					</div>
+				</details>
+				<details name="accordion1">
+					<summary class="box acrossTrue apart">
+						<p class="pLarge">Can I request revisions for my website?</p>
+					</summary>
+					<div class="answer">
+						<p class="subtextBlack">Yes. All projects come with 2 rounds of revisions. You have 48 hours to send your revisions. Additional rounds of revisions are $100CAD each. I limit revision rounds to get your website online as fast as possible.<br><br>In my experience, a long revision phase tends to waste a lot of time, and often results in a weaker final product.</p>
+					</div>
+				</details>
+				
+			</div>
+			<div class="box closer">
+				<details name="accordion2">
+					<summary class="box acrossTrue apart">
+						<p class="pLarge">How long does development take?</p>
+					</summary>
+					<div class="answer">
+						<p class="subtextBlack">I guarantee a 14-day delivery. The project starts after you have provided all of your branding and images. The timeline will be extended if there are additional rounds of revisions.</p>
+					</div>
+				</details>
+				<details name="accordion2">
+					<summary class="box acrossTrue apart">
+						<p class="pLarge">What tools do you use to build websites?</p>
+					</summary>
+					<div class="answer">
+						<p class="subtextBlack">Most of my websites are completely custom coded with HTML, CSS and JavaScript. I use the Astro framework for static site generation, and I use Firebase for static hosting.<br><br>I also build websites using Framer. If you would specifically like a Framer website then let me know when you reach out.</p>
+					</div>
+				</details>
+			</div>
+            
+		</div>
+
+        <br>
+	</section>
+
+    <!--CTA-->
+    <section class="normalSection">
+        <div class="gradientBG"></div>
+        <div class="container">
+            <div class="box center fill">
+                <div class="box center limit">
+                    <h2>Let Your Customers Find You Online</h2>
+                    <p>Your business needs a professional website for potential clients to find you. 92% of customers will visit a local businesses’ website when deciding which business to use. Don’t get left behind.</p>
+                    <a href="#contact" class="button main"><p>Get Started</p></a>
+                </div>
+            </div>
+        </div>
+            
+    </section>
+
+    <!--CONTACT-->
+    <section id="contact" class="normalSection close">
+        <div class="container lightPaddingBot">
+            <div class="box center"><h2 class="pSmall thin tag darkBack ">Contact</h2></div>
+        </div>
+        <div class="container noPaddingTop">
+            <div class="box">
+                <h3>Let's Work Together!</h3>
+                <p>I'd love to hear about your project. Tell me about your business, and feel free to ask any questions. I'll get back to you as soon as I can.</p>
+                <form class="box close" action="https://formsubmit.co/013156e829aadb58d778adcecfdb1fbd" method="POST">
+                    <div class="box across close">
+                        <div class="box closest">
+                            <label for="name"><p>Name *</p></label>
+                            <input class="inputBox" type="text" name="name" id="name" placeholder="John Smith" required>
+                        </div>
+                        <div class="box closest">
+                            <label for="email"><p>Email *</p></label>
+                            <input class="inputBox" type="email" name="email" id="email" placeholder="jsmith@example.com" required>
+                        </div>
+                    </div>
+                    <div class="box across close">
+                        <div class="box closest">
+                            <label for="type"><p>Project Type</p></label>
+                            <select name="type" id="type" class="inputBox">
+                                <option style="color: hsla(0, 0%, 0%, .5);">Selection...</option>
+                                <option value="Landing Page">Landing Page</option>
+                                <option value="Business Site">Small Business Website</option>
+                                <option value="Custom">Custom</option>
+                            </select>
+                        </div>
+                        <div class="box closest">
+                            <label for="company"><p>Business Name</p></label>
+                            <input class="inputBox" type="text" name="company" id="company" placeholder="Your Business">
+                        </div>
+                    </div>
+                    <div class="box closest">
+                        <label for="message"><p>Project Details</p></label>
+                        <textarea class="inputBox textArea" rows="6" cols="64" name="message" id="message" placeholder="Any questions or additional details about your project." required></textarea>
+                    </div>
+                    <input type="hidden" name="_next" value="https://offers.ecwebdev.ca/thank-you">
+                    <button type="submit" name="submit" class="button main fill"><p>Submit</p></button>
+                </form>
+            </div>
+            <div class="box close">
+                <div class="box close centerMobile across apart endAlign">
+                    <div id="placeholder"></div>
+                    <!-- 
+                    <div class="box acrossTrue closer centerAlign tag darkBack shrink visCenter centerMobile">
+                        <img class="icon" src="images/googleLogo.webp" alt="Google Logo">
+                        <div class="box closest">
+                            <div class="box closest acrossTrue">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32">
+                            </div>
+                            <p class="pTiny"><b>5</b> of <b>5 Stars</b></p>
+                        </div>
+                    </div>-->
+                    <div class="box close centerMobile shrink endAlign">
+                        <div class="box acrossTrue closer centerAlign tag darkBack shrink visCenter">
+                            <img width="32" height="32" class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>14-Day Delivery</p>
+                        </div>
+                        <div class="box acrossTrue closer centerAlign tag darkBack shrink visCenter">
+                            <img width="32" height="32" class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p>Bug Fix Guarantee</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="box fill card close outline lightPaddingBot">
+                    <h4>He was knowledgeable, helpful and efficient</h4>
+                    <p class="pSmall"><i>Ethan helped us to restructure and optimise our framer site to improve our SEO. He was knowledgeable, helpful and efficient. I'm sure we'll work together again.</i></p>
+                    <div class="box acrossTrue apart centerAlign close">
+                        <img class="icon" src="images/googleLogo.webp" alt="Google Logo">
+                        <div class="box closest shrink">
+                            <div class="box closest acrossTrue end">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                            </div>
+                            <p><i>- Pete Sanderson</i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box fill card close outline lightPaddingBot">
+                    <h4>I had an amazing experience</h4>
+                    <p class="pSmall"><i>From start to finish, he was professional, organized, and clear about every step of the process. I loved the progress tracker document he shared. It made it easy to see how the project was coming along and what was next in the plan.</i></p>
+                    <div class="box acrossTrue apart centerAlign close">
+                        <img class="icon" src="images/googleLogo.webp" alt="Google Logo">
+                        <div class="box closest shrink">
+                            <div class="box closest acrossTrue end">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                            </div>
+                            <p><i>- Cassandra</i></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+	<Footer />
+
+    <script src="../scripts/lightbox.js"></script>
+    
 	</body>
 </html>

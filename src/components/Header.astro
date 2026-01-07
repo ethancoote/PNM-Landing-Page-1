@@ -1,0 +1,66 @@
+<header id="navDesktop">
+    <nav class="navigationBar">
+        <div class="logoDiv">
+            <a href="/#home"><img src="/images/logo.svg" alt="company logo">
+            <div class="box logo">
+                <p><b>Ethan Coote</b></p>
+                <p class="logoSmall subtextBlack">Web Developer</p>
+            </div>
+            </a>
+            
+        </div>
+        
+        <ul class="navigationMenu">
+            <li><a href="/#home"><p class="pSmall">Home</p></a></li>
+            <li><a href="/#about"><p class="pSmall">About</p></a></li>
+            <li><a href="/#pricing"><p class="pSmall">Pricing</p></a></li>
+            <li><a href="/#contact"><p class="pSmall">Contact</p></a></li>
+            <li><a href="/#portfolio"><p class="pSmall">Portfolio</p></a></li>
+        </ul>
+        <div class="navButton">
+            <a href="/#contact" class="button"><p class="buttonText">Get In Touch</p></a>
+        </div>
+        
+    </nav>
+</header>
+
+<!--BURGER MENU-->
+<header id="navMobile">
+    <nav class="navigationBar">
+        <div class="logoDiv">
+            <a href="/#home"><img src="/images/logo.svg" alt="company logo">
+            <div class="box logo">
+                <p>Ethan Coote</p>
+                <p class="logoSmall subtextBlack">Web Developer</p>
+            </div>
+            </a>
+        </div>
+        <div id="hamburger"></div>
+    </nav>
+    
+</header>
+<header>
+    <div class="mobileMenu">
+        <ul class="navigationMenu">
+            <li><a href="/#home"><p class="pLarge">Home</p></a></li>
+            <li><a href="/#about"><p class="pLarge" >About</p></a></li>
+            <li><a href="/#pricing"><p class="pLarge" >Pricing</p></a></li>
+            <li><a href="/#contact"><p class="pLarge">Contact</p></a></li>
+            <li><a href="/#portfolio"><p class="pLarge">Portfolio</p></a></li>
+        </ul>
+        <div class="navButton">
+            <a href="/#contact" class="button"><p class="buttonText">Get in Touch</p></a>
+        </div>
+    </div>
+</header>
+<style>
+    #hamburger {
+        background-image: url("/images/burger-bar.png"), url("/images/close.png");
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center, center left 30px;
+        width: 24px;
+        height: 24px;
+    }
+</style>
+<script src="../scripts/nav.js"></script>
