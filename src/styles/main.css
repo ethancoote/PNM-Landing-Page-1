@@ -1,14 +1,14 @@
 :root {
     --max-width: 1400px;
-    --border-radius: 8px;
-    --primary-color: #1a4dbc;
-    --primary-dark: hsl(221, 77%, 37%);
-    --primary-darkest: hsl(221, 74%, 29%);
-    --secondary-color: #1a4dbc;
+    --border-radius: 16px;
+    --primary-color: #ff6123;
+    --primary-dark: #e25118;
+    --primary-darkest: #c74a19;
+    --secondary-color: #f0581c;
     --secondary-hover:#fcfcff;
     --off-black:hsl(224, 31%, 10%);
-    --off-white:hsl(240, 100%, 99%);
-    --off-gray: hsl(240, 36%, 96%);
+    --off-white:hsl(36, 100%, 99%);
+    --off-gray: hsl(12, 33%, 95%);
     --black-tint: hsla(0, 0%, 0%, .05);
 }
 
@@ -54,7 +54,7 @@ html {
 .navigationMenu {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: end;
     column-gap: 16px;
     width: 100%;
 }
@@ -86,7 +86,8 @@ html {
 
 .logoDiv img {
     width: 46px;
-    height: 46px;
+    height:46px;
+    object-fit: cover;
 }
 
 .logoDiv a {
@@ -107,7 +108,7 @@ html {
 .navButton {
     display: flex;
     justify-content: end;
-    width: 350px;
+    width: 300px;
 }
 
 #navMobile {
@@ -241,7 +242,7 @@ html {
 
 .gradientBG {
     position:absolute;
-    background-image: linear-gradient(to left, hsla(221, 76%, 42%, .15),hsla(138, 82%, 17%, 0.1));
+    background-image: linear-gradient(to left, hsla(17, 100%, 57%, 0.2),hsla(36, 82%, 35%, 0.199));
     top: 0;
     bottom: 0;
     left: 0;
@@ -438,9 +439,14 @@ html {
     column-gap: 24px;
     row-gap: 24px;
 }
-
-.apart {
+.box.fill.card.apart {
     justify-content: space-between;
+}
+
+
+
+.apartAlign {
+    align-items: space-between;
 }
 
 .bottom {
@@ -533,6 +539,12 @@ html {
 .primary {
     color: var(--primary-color);
 }
+.noBalance {
+    text-wrap: auto;
+}
+.apart {
+    justify-content: space-between;
+}
 
 /*BUTTONS AND ANCHORS*/
 .button {
@@ -605,6 +617,10 @@ html {
     width: 100%;
 }
 
+a:hover {
+    cursor:pointer;
+}
+
 /*IMGS*/
 .normalImg {
     width:100%;
@@ -648,6 +664,13 @@ html {
     aspect-ratio: 1;
 }
 
+.mainIcon {
+    height:84px;
+    width: 84px;
+    object-fit: contain;
+    aspect-ratio: 1;
+}
+
 .iconSmall {
     height: 32px;
     width: auto;
@@ -664,17 +687,26 @@ html {
 }
 
 .heroImage {
-    border-radius: 100px;
+    border-radius: 200px;
     width: 100%;
     aspect-ratio: 4/1;
     object-fit: cover;
+}
+
+.heroImage1 {
+    border-radius: var(--border-radius);
+    width: 100%;
+    aspect-ratio: 7/8;
+    object-fit: cover;
+    object-position: 50% 50%;
+    max-width: 85%;
+    justify-self: end;
 }
 
 #heroImage1 {
     object-position: 25% 27%;
     max-width: 85%;
 }
-
 
 #heroImage3 {
     object-position: 0% 60%;

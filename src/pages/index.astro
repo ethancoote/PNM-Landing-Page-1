@@ -5,6 +5,7 @@ import '../styles/fonts.css';
 import '../styles/portfolio.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import FiveStars from '../components/FiveStars.astro';
 //import Gtag from "../components/Gtag.astro";
 //import Heatmap from "../components/Heatmap.astro";
 ---
@@ -12,7 +13,7 @@ import Footer from '../components/Footer.astro';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/images/logo.png" />
+		<link rel="icon" type="image/svg+xml" href="/images/logo.webp" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
         <meta name="description" content="Trusted painters in Niagara and Oakville Ontario.">
@@ -38,10 +39,6 @@ import Footer from '../components/Footer.astro';
         
         <link rel="preload" fetchpriority="high" href="/images/mobile/mockup.webp" as="image" media="(max-width: 480px)">
         <link rel="preload" fetchpriority="high" href="/images/mockup.webp" as="image" media="(min-width: 481px)">
-        <link rel="preload" href="/images/cssLogo.webp" as="image">
-        <link rel="preload" href="/images/htmlLogo.webp" as="image">
-        <link rel="preload" href="/images/jsLogo.webp" as="image">
-        <link rel="preload" href="/images/astroLogo.webp" as="image">
         <!--Gtag />
         <Heatmap /-->
 	</head>
@@ -51,20 +48,20 @@ import Footer from '../components/Footer.astro';
 
 	<!--HERO-->
     <main id="home" class="normalSection hero">
-        <div class="container close">
+        <div class="container">
             <div class="box hero">
-                
-                <div class="box acrossTrue centerMobile">
-                    <img class="icon square" src="images/htmlLogo.webp" alt="html logo">
-                    <img class="icon square" src="images/cssLogo.webp" alt="css logo">
-                    <img class="icon square" src="images/jsLogo.webp" alt="js logo">
-                    <img class="icon square" src="images/astroLogo.webp" alt="astro logo">
-                </div>
-                
-                <h1 id="headline">Professional Websites<br><span class="color">For Service Businesses</span></h1>
-                <p id="subHeadline" class="subtextBlack">Cold calling, emailing, and Facebook <i>can</i> get you clients, but it's inconsistent and time consuming. Don’t waste time and money looking for leads. Let your customers come to you.</p>
+            
+                <a class="box acrossTrue closer centerAlign tag dark shrink visCenter centerMobile" href="https://www.google.com/localservices/profile?spp=Cg0vZy8xMXgwbXRyeW45&source=sh%2Fx%2Floc%2Fsrv%2Fm1%2F0&kgs=0c70fa0a8efd8e90" target="_blank">
+                    <img class="icon" src="images/googleLogo.webp" alt="checkmark icon">
+                    <div  class="box closest">
+                        <FiveStars />
+                        <p class="pTiny"><b>5</b> of <b>5 Stars</b></p>
+                    </div>
+                </a>
+                <h1 id="headline">Trusted Interior<br><span class="color">Painters in Niagara Falls</span></h1>
+                <p id="subHeadline" class="subtextBlack">Refresh your home with our top-rated interior painting services. Experienced, reliable, and meticulously clean. Get your free quote today!</p>
                 <div id="heroButtons" class="box across close mobile8Gap">
-                    <a href="#contact" class="button main"><p class="buttonText">Get Started</p>
+                    <a href="#contact" class="button main"><p class="buttonText">Get Your Free Quote</p>
                         <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="svgArrow" d="M18.7071 8.07107C19.0976 7.68055 19.0976 7.04739 18.7071 6.65686L12.3431 0.2929C11.9526 -0.0976242 11.3195 -0.0976242 10.9289 0.2929C10.5384 0.683424 10.5384 1.31659 10.9289 1.70711L16.5858 7.36397L10.9289 13.0208C10.5384 13.4113 10.5384 14.0445 10.9289 14.435C11.3195 14.8256 11.9526 14.8256 12.3431 14.435L18.7071 8.07107ZM0 7.36397L0 8.36397L18 8.36397V7.36397V6.36397L0 6.36397L0 7.36397Z"/></svg>
                     </a>
@@ -76,29 +73,29 @@ import Footer from '../components/Footer.astro';
                 <div id="tagsDesktop" class="box close centerMobile across">
                     <div class="box acrossTrue closer centerAlign tag dark shrink visCenter">
                         <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32">
-                        <p>Bug-Fix Guarantee</p>
+                        <p>2-Year Warranty</p>
                     </div>
                     <div class="box acrossTrue closer centerAlign tag dark shrink visCenter">
                         <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32">
-                        <p>14-Day Delivery</p>
+                        <p>Free Estimates</p>
                     </div>
                 </div>
             </div>
             <div class="box closer center">
                 <picture>
-                    <source srcset="images/mobile/mockup.webp" media="(min-width: 0px) and (max-width: 480px)">
-                    <img class="normalImg sixteenByNine" id="heroImage2" src="images/mockup.webp" alt="mockup of a website on different screen sizes" fetchpriority="high" loading="eager">
+                    <source srcset="images/mobile/living-room-white.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img class="normalImg heroImage1" src="images/living-room-white.webp" alt="a living room with fresh white paint" fetchpriority="high" loading="eager">
                 </picture>
-                
+
             </div>
             <div id="tagsMobile" class="box close centerMobile across">
                     <div class="box acrossTrue closer centerAlign tag dark shrink visCenter">
                         <img class="iconSmall" src="images/check.svg" alt="checkmark icon">
-                        <p>Bug-Fix Guarantee</p>
+                        <p>2-Year Warranty</p>
                     </div>
                     <div class="box acrossTrue closer centerAlign tag dark shrink visCenter">
                         <img class="iconSmall" src="images/check.svg" alt="checkmark icon" >
-                        <p>14-Day Delivery</p>
+                        <p>Free Estimates</p>
                     </div>
                 </div>
         </div>
@@ -114,6 +111,7 @@ import Footer from '../components/Footer.astro';
                 #tagsMobile {
                     display: flex;
                 }
+                
 			}
             @media only screen and (min-width: 901px) {
                 #tagsDesktop {
@@ -123,217 +121,36 @@ import Footer from '../components/Footer.astro';
                     display: none;
                 }
             }
+            @media only screen and (max-width: 1020px) {
+                #heroButtons {
+                    flex-direction: column;
+                }
+                .heroImage1 {
+                    max-width: 100%;
+                }
+            }
 			
 		</style>
     </main>
 
-    <!--PORTFOLIO-->
-    <section class="normalSection close" id="portfolio">
-        <div class="container noPaddingBot">
-            <div class="box center"><h2 class="pSmall thin darkBack tag">Portfolio</h2></div>
-        </div>
-        <div class="noPaddingBot lightPaddingTop container closeish acrossTrue">
-
-            <div class="divider mobileHide"></div>
-            <div class="box center">
-                <h2>Recent Projects</h2>
+    <!--CTA-->
+    <section class="normalSection darkBack">
+        <div class="container">
+            <div class="box center noPaddingTop">
+                
+                <div class="box center limit">
+                    <img class="mainIcon" src="/images/logo.webp" alt="painters near me logo">
+                    <div class="box closer">
+                        <h2>Elevate Your Space </h2>
+                        <h3 class="h2 color">With Trusted Interior Painters</h3>
+                    </div>
+                    
+                    <p>Your home deserves more than just a new colour. It deserves to be treated with top-quality products for a beautiful, lasting finish. At <b>Painters Near Me</b>, we make your home feel brand-new again.</p>
+                    <a href="#contact" class="button main"><p class="buttonText">Get a Quote</p></a>
+                </div>
             </div>
+        </div>
             
-            <div class="divider mobileHide"></div>
-
-        </div>
-        <div class="lightbox">
-            
-            <img id="lightboxImg" src="images/portfolio/apexFull.webp" alt="homepage image" loading="lazy">
-            <div id="lightboxClose">
-                <img class="icon" src="images/close.png" alt="close X">
-            </div>
-        </div>
-        <div class="container grid top apart noPaddingTop closeish">
-            <div class="box closer portfolioItem margin16">
-                <div class="box relative">
-                    <div class="hoverTextBox">
-                        <p class="hoverText pLarge">+<br>Design Preview</p>
-                    </div>
-                    <picture>
-                        <source srcset="../images/portfolio/mobile/trueauto.webp" media="(min-width: 0px) and (max-width: 480px)">
-                        <img class="normalImg outline fourByThree" src="../images/portfolio/trueauto.webp" alt="true auto detailing homepage mockup" loading="lazy" width="400" height="300">
-                    </picture>
-                    
-                </div>
-                <div class="box closest">
-                    <div class="box acrossTrue apart">
-                        <p class="pLarge black">True Auto Detailing</p>
-                        <p class="subtextBlack">01/2026</p>
-                    </div>
-                    <p class="subtextBlack">Design & Development</p>
-                </div>
-            </div>
-            <div class="box closer portfolioItem margin16">
-                <div class="box relative">
-                    <div class="hoverTextBox">
-                        <p class="hoverText pLarge">+<br>Design Preview</p>
-                    </div>
-                    <picture>
-                        <source srcset="../images/portfolio/mobile/chalkie.webp" media="(min-width: 0px) and (max-width: 480px)">
-                        <img class="normalImg outline fourByThree" src="../images/portfolio/chalkie.webp" alt="Chalkie AI homepage mockup" loading="lazy" width="400" height="300">
-                    </picture>
-                    
-                </div>
-                <div class="box closest">
-                    <div class="box acrossTrue apart">
-                        <p class="pLarge black">Chalkie AI</p>
-                        <p class="subtextBlack">12/2025</p>
-                    </div>
-                    <p class="subtextBlack">SEO & Performance Optimization</p>
-                </div>
-            </div>
-            <div class="box closer portfolioItem margin16">
-                <div class="box relative">
-                    <div class="hoverTextBox">
-                        <p class="hoverText pLarge">+<br>Design Preview</p>
-                    </div>
-                    <picture>
-                        <source srcset="../images/portfolio/mobile/nycurls.webp" media="(min-width: 0px) and (max-width: 480px)">
-                        <img class="normalImg outline fourByThree" src="../images/portfolio/nycurls.webp" alt="NY-Curls homepage mockup" loading="lazy" width="400" height="300">
-                    </picture>
-                    
-                </div>
-                <div class="box closest">
-                    <div class="box acrossTrue apart">
-                        <p class="pLarge black">NY Curls</p>
-                        <p class="subtextBlack">12/2025</p>
-                    </div>
-                    <p class="subtextBlack">Design and Development</p>
-                </div>
-            </div>
-            <div class="box closer portfolioItem margin16">
-                <div class="box relative">
-                    <div class="hoverTextBox">
-                        <p class="hoverText pLarge">+<br>Design Preview</p>
-                    </div>
-                    <picture>
-                        <source srcset="../images/portfolio/mobile/bim.webp" media="(min-width: 0px) and (max-width: 480px)"> 
-                        <img class="normalImg outline fourByThree" src="../images/portfolio/bim.webp" alt="The BIM Builders homepage mockup" loading="lazy" width="400" height="300">
-                    </picture>
-                    
-                </div>
-                
-                <div class="box closest">
-                    <div class="box acrossTrue apart">
-                        <p class="pLarge black">The BIM Builders</p>
-                        <p class="subtextBlack">11/2025</p>
-                    </div>
-                    <p class="subtextBlack">Bug Fixes and UI Updates</p>
-                </div>
-            </div>
-            <div class="box closer portfolioItem margin16">
-                <div class="box relative">
-                    <div class="hoverTextBox">
-                        <p class="hoverText pLarge">+<br>Design Preview</p>
-                    </div>
-                    <picture>
-                        <source srcset="../images/portfolio/mobile/kansasvc.webp" media="(min-width: 0px) and (max-width: 480px)">
-                        <img class="normalImg outline fourByThree" src="../images/portfolio/kansasvc.webp" alt="The Kansas VC homepage mockup" loading="lazy" width="400" height="300">
-                    </picture>
-                    
-                </div>
-                
-                <div class="box closest">
-                    <div class="box acrossTrue apart">
-                        <p class="pLarge black">Kansas Vet Clinic</p>
-                        <p class="subtextBlack">11/2025</p>
-                    </div>
-                    <p class="subtextBlack">Design & Development</p>
-                </div>
-            </div>
-            <div class="box closer portfolioItem margin16">
-                
-                <div class="box relative">
-                    <div class="hoverTextBox">
-                        <p class="hoverText pLarge">+<br>Design Preview</p>
-                    </div>
-                    <picture>
-                        <source srcset="../images/portfolio/mobile/apex.webp" media="(min-width: 0px) and (max-width: 480px)">
-                        <img class="normalImg outline fourByThree" src="../images/portfolio/apex.webp" alt="apex auto homepage mockup" loading="lazy" width="400" height="300">
-                    </picture>
-                    
-                </div>
-                
-                <div class="box closest">
-                    <div class="box acrossTrue apart">
-                        <p class="pLarge black">Apex Auto</p>
-                        <p class="subtextBlack">10/2025</p>
-                    </div>
-                    <p class="subtextBlack">Design & Development</p>
-                </div>
-            </div>
-            <div class="box closer portfolioItem margin16">
-                
-                <div class="box relative">
-                    <div class="hoverTextBox">
-                        <p class="hoverText pLarge">+<br>Design Preview</p>
-                    </div>
-                    <picture>
-                        <source srcset="../images/portfolio/mobile/greenway.webp" media="(min-width: 0px) and (max-width: 480px)">
-                        <img class="normalImg outline fourByThree" src="../images/portfolio/greenway.webp" alt="apex auto homepage mockup" loading="lazy" width="400" height="300">
-                    </picture>  
-                    
-                </div>
-                
-                <div class="box closest">
-                    <div class="box acrossTrue apart">
-                        <p class="pLarge black">Greenway Landscaping</p>
-                        <p class="subtextBlack">10/2025</p>
-                    </div>
-                    <p class="subtextBlack">Design & Development</p>
-                </div>
-            </div>
-            <div class="box closer portfolioItem margin16">
-                <div class="box relative">
-                    <div class="hoverTextBox">
-                        <p class="hoverText pLarge">+<br>Design Preview</p>
-                    </div>
-                    <picture>
-                        <source srcset="../images/portfolio/mobile/elevate.webp" media="(min-width: 0px) and (max-width: 480px)">
-                        <img class="normalImg outline fourByThree" src="../images/portfolio/elevate.webp" alt="elevate homes homepage mockup" loading="lazy" width="400" height="300">
-                    </picture>
-                    
-                </div>
-                
-                <div class="box closest">
-                    <div class="box acrossTrue apart">
-                        <p class="pLarge black">Elevate Homes</p>
-                        <p class="subtextBlack">10/2025</p>
-                    </div>
-                    <p class="subtextBlack">Design & Development</p>
-                </div>
-            </div>
-            <div class="box closer portfolioItem margin16">
-                <div class="box relative">
-                    <div class="hoverTextBox">
-                        <p class="hoverText pLarge">+<br>Design Preview</p>
-                    </div>
-                    <picture>
-                        <source srcset="../images/portfolio/mobile/arlo.webp" media="(min-width: 0px) and (max-width: 480px)">
-                        <img class="normalImg outline fourByThree" src="../images/portfolio/arlo.webp" alt="Alro homepage mockup" loading="lazy" width="400" height="300">
-                    </picture>
-                    
-                </div>
-                
-                <div class="box closest">
-                    <div class="box acrossTrue apart">
-                        <p class="pLarge black">Arlo Vega Portfolio</p>
-                        <p class="subtextBlack">09/2025</p>
-                    </div>
-                    <p class="subtextBlack">Design & Development</p>
-                </div>
-            </div>
-            
-        </div>
-        <div class="container noPaddingTop lightPaddingBot">
-            <div class="divider"></div>
-        </div>
     </section>
 
     <!--Performance-->
@@ -380,142 +197,87 @@ import Footer from '../components/Footer.astro';
         </div>
     </section>
 
-    <!--Price-->
-    <section id="pricing" class="normalSection closeish">
-        <div class="gradientBG"></div>
-        <div class="container noPaddingBot">
-            <div class="box center"><h2 class="pSmall thin tag">Packages</h2></div>
-        </div>
-        <div class="container close center noPaddingTop" >    
-            <div class="box fill small center card outline">
-                <div class="box limit" >
-                    <div class="box">
-                        <h2 class="p thin color">High Converting Landing Page</h2>
-                        <p><b class="h2">CAD$599</b></p>
-
+    <!--Testimonials -->
+    <section class="normalSection close darkBack" id="testimonials">
+        <div class="container lightPaddingBot">
+            <div class="box center closish">
+                <a class="box acrossTrue closer centerAlign tag darkBack shrink visCenter centerMobile" href="https://www.google.com/localservices/profile?spp=Cg0vZy8xMXgwbXRyeW45&source=sh%2Fx%2Floc%2Fsrv%2Fm1%2F0&kgs=0c70fa0a8efd8e90" target="_blank">
+                    <img class="icon" src="images/googleLogo.webp" alt="checkmark icon">
+                    <div  class="box closest">
+                        <FiveStars />
+                        <p class="pTiny"><b>5</b> of <b>5 Stars</b></p>
                     </div>
-                    <div class="box close">
-                        <p><i>What's Included:</i></p>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall " src="images/check.svg" alt="checkmark icon" width="32" height="32" loading="lazy">
-                            <p>Conversion Focused Landing Page</p>
+                </a>
+                <h3>Don't Take Our Word For It</h3>
+                <p>Take a look at what our happy customers had to say.</p>
+            </div>
+        </div>     
+        <div class="container close noPaddingBot lightPaddingTop">
+            <div class="box fill card close outline lightPaddingBot apart stretch">
+                <div class="box close">
+                    <h4>What an outstanding job!</h4>
+                    <p class="pSmall noBalance"><i>Thanks to Austin, Dan and the entire Painters Near Me team. You all worked diligently, carefully, cleanly and clearly take pride in your craft. Thank you for doing a wonderful job. It was a pleasure dealing with you from the moment Max first spoke to me about you. Your honesty and professionalism are a credit to yourselves and your company.</i></p>
+                </div>
+                <div class="box acrossTrue apart close ">
+                    <img class="icon" src="images/googleLogo.webp" alt="Google Logo">
+                    <div class="box shrink">
+                        <div class="box closest shrink">
+                            <FiveStars />
+                            <p><i>- Lorne Lipkus</i></p>
                         </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Fully Responsive</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32" loading="lazy">
-                            <p>Technical SEO Setup</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32" loading="lazy">
-                            <p>Copywriting</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32" loading="lazy">
-                            <p>Branded With Your Logo & Assets</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32" loading="lazy">
-                            <p>Linked to Your Social Media</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Custom Contact Form</p>
-                        </div>
-                        
-                    </div><br>
-                    
-                    <a href="#contact" class="button secondary fill"><p>Get Started</p></a>
+                    </div>
                 </div>
             </div>
-            <div class="box fill small center card highlight">
-                <div class="box limit" >
-                    <div class="box">
-                        <h2 class="p thin color">Service Business Website Package</h2>
-                        <p><b class="h2">CAD$999</b></p>
-
-                    </div>
-                    <div class="box close">
-                        <p><i>What's Included:</i></p>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall " src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>5 Page Custom Website</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>On Page & Technical SEO Setup</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Fully Responsive</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Full Site Copywriting</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Branded With Your Logo & Assets</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Linked to Your Social Media</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Custom Contact Form</p>
-                        </div>
-                    </div><br>
-                    
-                    <a href="#contact" class="button main fill"><p>Get Started</p></a>
+            <div class="box fill card close outline lightPaddingBot apart stretch">
+                <div class="box close">
+                    <h4>Highly recommended!</h4>
+                    <p class="pSmall noBalance"><i>I recently hired Painters Near Me to paint my townhouse, and I couldn't be happier with the results! From the initial consultation to the final walkthrough, their professionalism and attention to detail were outstanding. The team was punctual, respectful of my home, and clearly take pride in their work.</i></p>
                 </div>
-                
-            </div> 
-            <div class="box fill small center card outline">
-                <div class="box limit" >
-                    <div class="box">
-                        <h2 class="p thin color">Don't Fit in a Box?</h2>
-                        <p><b class="h2">CAD$2999+</b></p>
-
+                <div class="box acrossTrue apart close ">
+                    <img class="icon" src="images/googleLogo.webp" alt="Google Logo">
+                    <div class="box shrink">
+                        <div class="box closest shrink">
+                            <FiveStars />
+                            <p><i>- Melanie Vautour</i></p>
+                        </div>
                     </div>
-                    <div class="box close">
-                        <p><i>What's Included:</i></p>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall " src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Full Custom Website</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Fully Responsive</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>On Page & Technical SEO Setup</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Full Site Copywriting</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Branded With Your Logo & Assets</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Linked to Your Social Media</p>
-                        </div>
-                        <div class="box acrossTrue close textLeft">
-                            <img class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Custom Contact Form</p>
-                        </div>
-                    </div><br>
-                    
-                    <a href="#contact" class="button secondary fill"><p>Get In Touch</p></a>
                 </div>
-                
-            </div> 
+            </div>
+        </div>
+        <div class="container close noPaddingTop lightPaddingBot">
+            <div class="box fill card close outline lightPaddingBot apart stretch">
+                <div class="box close">
+                    <h4>Thank you for an amazing job.</h4>
+                    <p class="pSmall noBalance"><i>Austin and his team were amazing. I absolutely love the job they did if I could give 10 star I would !!! Thank you for an amazing job.</i></p>
+                </div>
+                <div class="box acrossTrue apart close ">
+                    <img class="icon" src="images/googleLogo.webp" alt="Google Logo">
+                    <div class="box shrink">
+                        <div class="box closest shrink">
+                            <FiveStars />
+                            <p><i>- Kim Muro</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box fill card close outline lightPaddingBot">
+                <h4>Professional, clean and polite.</h4>
+                <p class="pSmall noBalance"><i>This was a job very well done. Professional, clean and polite. No Mess left behind for me to clean up. I would definitely recommend Painters Near Me, to my family and friends.</i></p>
+                <div class="box acrossTrue apart centerAlign close ">
+                    <img class="icon" src="images/googleLogo.webp" alt="Google Logo">
+                    <div class="box shrink">
+                        <div class="box closest shrink">
+                            <FiveStars />
+                            <p><i>- Susan Whiteford</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container lightPaddingTop">
+            <div class="box center">
+                <a class="button primary" href="https://www.google.com/localservices/profile?spp=Cg0vZy8xMXgwbXRyeW45&source=sh%2Fx%2Floc%2Fsrv%2Fm1%2F0&kgs=0c70fa0a8efd8e90" target="_blank"><p class="buttonText">See More Reviews</p></a>
+            </div>
         </div>
     </section>
 
@@ -614,21 +376,6 @@ import Footer from '../components/Footer.astro';
         <br>
 	</section>
 
-    <!--CTA-->
-    <section class="normalSection">
-        <div class="gradientBG"></div>
-        <div class="container">
-            <div class="box center fill">
-                <div class="box center limit">
-                    <h2>Let Your Customers Find You Online</h2>
-                    <p>Your business needs a professional website for potential clients to find you. 92% of customers will visit a local businesses’ website when deciding which business to use. Don’t get left behind.</p>
-                    <a href="#contact" class="button main"><p>Get Started</p></a>
-                </div>
-            </div>
-        </div>
-            
-    </section>
-
     <!--CONTACT-->
     <section id="contact" class="normalSection close">
         <div class="container lightPaddingBot">
@@ -668,74 +415,59 @@ import Footer from '../components/Footer.astro';
                         <label for="message"><p>Project Details</p></label>
                         <textarea class="inputBox textArea" rows="6" cols="64" name="message" id="message" placeholder="Any questions or additional details about your project." required></textarea>
                     </div>
-                    <input type="hidden" name="_next" value="https://offers.ecwebdev.ca/thank-you">
+                    <input type="hidden" name="_next" value="https://offers.paintersnear-me.com/thank-you">
                     <button type="submit" name="submit" class="button main fill"><p>Submit</p></button>
                 </form>
             </div>
             <div class="box close">
                 <div class="box close centerMobile across apart endAlign">
-                    <div id="placeholder"></div>
-                    <!-- 
-                    <div class="box acrossTrue closer centerAlign tag darkBack shrink visCenter centerMobile">
-                        <img class="icon" src="images/googleLogo.webp" alt="Google Logo">
-                        <div class="box closest">
-                            <div class="box closest acrossTrue">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32">
-                            </div>
-                            <p class="pTiny"><b>5</b> of <b>5 Stars</b></p>
-                        </div>
-                    </div>-->
+                    <a class="box acrossTrue closer centerAlign tag darkBack shrink visCenter centerMobile" href="https://www.google.com/localservices/profile?spp=Cg0vZy8xMXgwbXRyeW45&source=sh%2Fx%2Floc%2Fsrv%2Fm1%2F0&kgs=0c70fa0a8efd8e90" target="_blank">
+                    <img class="icon" src="images/googleLogo.webp" alt="checkmark icon">
+                    <div  class="box closest">
+                        <FiveStars />
+                        <p class="pTiny"><b>5</b> of <b>5 Stars</b></p>
+                    </div>
+                </a>
                     <div class="box close centerMobile shrink endAlign">
                         <div class="box acrossTrue closer centerAlign tag darkBack shrink visCenter">
                             <img width="32" height="32" class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>14-Day Delivery</p>
+                            <p>2-Year Warranty</p>
                         </div>
                         <div class="box acrossTrue closer centerAlign tag darkBack shrink visCenter">
                             <img width="32" height="32" class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
-                            <p>Bug Fix Guarantee</p>
+                            <p>Free Estimates</p>
                         </div>
                         
                     </div>
                 </div>
-                <div class="box fill card close outline lightPaddingBot">
-                    <h4>He was knowledgeable, helpful and efficient</h4>
-                    <p class="pSmall"><i>Ethan helped us to restructure and optimise our framer site to improve our SEO. He was knowledgeable, helpful and efficient. I'm sure we'll work together again.</i></p>
-                    <div class="box acrossTrue apart centerAlign close">
+                <div class="box fill card close outline lightPaddingBot apart stretch">
+                    <div class="box close">
+                        <h4>What an outstanding job!</h4>
+                        <p class="pSmall noBalance"><i>Thanks to Austin, Dan and the entire Painters Near Me team. You all worked diligently, carefully, cleanly and clearly take pride in your craft. Thank you for doing a wonderful job. It was a pleasure dealing with you from the moment Max first spoke to me about you. Your honesty and professionalism are a credit to yourselves and your company.</i></p>
+                    </div>
+                    <div class="box acrossTrue apart close ">
                         <img class="icon" src="images/googleLogo.webp" alt="Google Logo">
-                        <div class="box closest shrink">
-                            <div class="box closest acrossTrue end">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                        <div class="box shrink">
+                            <div class="box closest shrink">
+                                <FiveStars />
+                                <p><i>- Lorne Lipkus</i></p>
                             </div>
-                            <p><i>- Pete Sanderson</i></p>
                         </div>
                     </div>
                 </div>
                 <div class="box fill card close outline lightPaddingBot">
-                    <h4>I had an amazing experience</h4>
-                    <p class="pSmall"><i>From start to finish, he was professional, organized, and clear about every step of the process. I loved the progress tracker document he shared. It made it easy to see how the project was coming along and what was next in the plan.</i></p>
-                    <div class="box acrossTrue apart centerAlign close">
+                    <h4>Professional, clean and polite.</h4>
+                    <p class="pSmall noBalance"><i>This was a job very well done. Professional, clean and polite. No Mess left behind for me to clean up. I would definitely recommend Painters Near Me, to my family and friends.</i></p>
+                    <div class="box acrossTrue apart centerAlign close ">
                         <img class="icon" src="images/googleLogo.webp" alt="Google Logo">
-                        <div class="box closest shrink">
-                            <div class="box closest acrossTrue end">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
-                                <img class="iconTiny" src="images/star.svg" alt="star icon" width="32" height="32" loading="lazy">
+                        <div class="box shrink">
+                            <div class="box closest shrink">
+                                <FiveStars />
+                                <p><i>- Susan Whiteford</i></p>
                             </div>
-                            <p><i>- Cassandra</i></p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
