@@ -708,12 +708,12 @@ a:hover {
 }
 
 .heroImage1 {
-    border-radius: var(--border-radius);
+    border-radius: 250px var(--border-radius) var(--border-radius) 250px;
     width: 100%;
     aspect-ratio: 7/8;
     object-fit: cover;
     object-position: 50% 50%;
-    max-width: 85%;
+    max-width: 95%;
     justify-self: end;
 }
 
