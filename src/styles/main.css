@@ -6,7 +6,7 @@
     --primary-darkest: #c74a19;
     --secondary-color: #f0581c;
     --secondary-hover:#fcfcff;
-    --off-black:hsl(224, 31%, 10%);
+    --off-black:hsl(24, 29%, 10%);
     --off-white:hsl(36, 100%, 99%);
     --off-gray: hsl(12, 33%, 95%);
     --black-tint: hsla(0, 0%, 0%, .05);
@@ -640,6 +640,11 @@ a:hover {
     object-fit: cover;
 }
 
+.sevenByEight {
+    aspect-ratio: 7/8;
+    object-fit: cover;
+}
+
 .sixteenByNine {
     aspect-ratio: 16/9;
     object-fit: cover;
@@ -660,6 +665,15 @@ a:hover {
     width: 48px;
     background-color: var(--off-gray);
     padding:4px;
+    border-radius: 100px;
+    aspect-ratio: 1;
+}
+
+.iconLarge {
+    height: 68px;
+    width: 68px;
+    background-color: var(--off-gray);
+    padding:6px;
     border-radius: 100px;
     aspect-ratio: 1;
 }
@@ -750,6 +764,14 @@ select {
     background-color: var(--black-tint);
     font-size: 1.8rem;
     color:hsla(0, 0%, 0%, .9)
+}
+
+.checkBox {
+    height: 16px;
+    width: 16px;
+    border: 1px solid hsla(0,0%,0%, .3);
+    margin-top: 6px;
+    margin-left: 4px;
 }
 
 /*FOOTER*/
