@@ -780,10 +780,39 @@ select {
     border: 1px solid hsla(0,0%,0%, .3);
     margin-top: 6px;
     margin-left: 4px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 0%, .05);
+    border-radius: 4px;
+}
+
+.checkBox:hover {
+    cursor:pointer;
 }
 
 .checkBox::before {
-    content:"0";
+    content:"✔";
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.checkBox:checked::before {
+    content:"✔";
+    opacity: 100%;
+}
+
+label {
+    width: 90%;
+}
+
+.link {
+    color: var(--primary-color);
+    transition: 0.2s;
+}
+
+.link:hover {
+    color: var(--off-black);
 }
 
 /*FOOTER*/

@@ -170,6 +170,7 @@ import FiveStars from '../components/FiveStars.astro';
                     <p>Interior painting doesn’t stop at your walls. At <b>Painters Near Me</b>, we specialize in walls, ceilings, trim, doors, and cabinetry. All your home improvement needs in one place.</p>
                     <p>Each project is done with care, and a great attention to detail. We provide consultation, planning, preparations, and organization, all while keeping your home meticulously clean. <b>Give your home a refreshing look that you’ll love!</b></p>
                 </div>
+                <a class="button secondary" href="/#contact"><p class="buttonText">Get in Touch</p></a>
             </div>
             
         </div>
@@ -214,7 +215,7 @@ import FiveStars from '../components/FiveStars.astro';
                 </a>
                 <div class="box close">
                     <h3>Don't Take Our Word For It</h3>
-                    <p>Take a look at what our happy customers had to say.</p>
+                    <p>See what our happy customers had to say.</p>
                 </div>
                 
             </div>
@@ -434,9 +435,23 @@ import FiveStars from '../components/FiveStars.astro';
                             <input class="inputBox" type="text" name="postal" id="postal" placeholder="LOS 1P0">
                         </div>
                     </div>
-                    
+                    <div class="box acrossTrue">
+                        <input class="checkBox" type="checkbox" name="checkbox1" id="checkbox1" required>
+                        <label for="checkbox1"><p class="pSmall">I consent to receive SMS notifications and alerts from <b>Painters Near Me</b>. Message frequency varies. Message & data rates may apply. You can reply STOP to unsubscribe at any time.</p></label>
+                    </div>
+                    <div class="box acrossTrue">
+                        <input class="checkBox" type="checkbox" name="checkbox2" id="checkbox2" required>
+                        <label for="checkbox2"><p class="pSmall noBalance">By checking this box I agree to receive occasional marketing messages from Painters Near Me</p></label>
+                    </div>
+                    <br>
                     <input type="hidden" name="_next" value="https://offers.paintersnear-me.com/thank-you">
-                    <button type="submit" name="submit" class="button main fill"><p class="buttonText">Submit</p></button>
+                    <button type="submit" name="submit" class="button main fill"><p class="buttonText">Submit</p></button><br>
+                    <div class="box acrossTrue close center">
+                        <a class="link" href="https://www.paintersnear-me.com/terms-and-conditions"><p class="pSmall">Terms and Conditions</p></a>
+                        <p> | </p>
+                        <a class="link" href="https://www.paintersnear-me.com/privacy-policy"><p class="pSmall">Privacy Policy</p></a>
+                    </div>
+                    
                 </form>
             </div>
             <div class="box close">
