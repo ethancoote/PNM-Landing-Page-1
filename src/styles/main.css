@@ -715,12 +715,13 @@ a:hover {
 }
 
 .heroImage1 {
-    border-radius: 250px var(--border-radius) var(--border-radius) 250px;
+    border-radius: var(--border-radius) var(--border-radius);
     width: 100%;
     aspect-ratio: 7/8;
     object-fit: cover;
     object-position: 50% 50%;
-    max-width: 95%;
+    max-width: 90%;
+    object-position: top;
     justify-self: end;
 }
 
