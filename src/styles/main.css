@@ -670,12 +670,19 @@ a:hover {
 }
 
 .iconLarge {
-    height: 68px;
-    width: 68px;
+    height: 72px;
+    width: 72px;
     background-color: var(--off-gray);
     padding:6px;
     border-radius: 100px;
     aspect-ratio: 1;
+}
+
+@media only screen and (max-width:600px) {
+    .iconLarge {
+        height: 58px;
+        width: 58px;
+    }
 }
 
 .mainIcon {
