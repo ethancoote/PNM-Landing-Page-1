@@ -782,6 +782,10 @@ select {
     margin-left: 4px;
 }
 
+.checkBox::before {
+    content:"0";
+}
+
 /*FOOTER*/
 .mainFooter {
     background-color: var(--off-black);
