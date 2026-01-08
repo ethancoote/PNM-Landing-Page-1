@@ -715,7 +715,7 @@ a:hover {
 }
 
 .heroImage1 {
-    border-radius: var(--border-radius) var(--border-radius);
+    border-radius:   var(--border-radius) 220px var(--border-radius) 220px;
     width: 100%;
     aspect-ratio: 7/8;
     object-fit: cover;
