@@ -3,20 +3,31 @@ const {src, head, body, alt} = Astro.props;
 ---
 
 <div class="box close center" id="serviceCard">
-    <img class="iconLarge square" id="serviceIcon" src={src} alt={alt} loading="lazy">
+    <div class="square" id="iconWrap">
+        <img class="iconLarge square" id="serviceIcon" src={src} alt={alt} loading="lazy">
+    </div>
+    
     <h4>{head}</h4>
     <p class="subtextWhite">{body}</p>
 </div>
 <style>
     #serviceIcon {
-        border: 1px solid hsla(0, 0%, 100%, 0.2 );
-        background-color: hsla(0, 0%, 0%, 0.2);
-        overflow: visible;
+        background-color: #0000;
+        border-radius: 0px;
+        padding:0px;
     }
     #serviceCard {
         margin: 12px 0px;
         align-self: start;
         max-width: 95%;
         justify-self: center;
+    }
+    #iconWrap {
+        display: flex;
+        border-radius: 100px;
+        background-color: hsla(0, 0%, 0%, 0.2);
+        border: 1px solid hsla(0, 0%, 100%, 0.2 );
+        justify-content: center;
+        padding: 6px;
     }
 </style>
