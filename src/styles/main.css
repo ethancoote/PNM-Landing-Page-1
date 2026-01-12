@@ -60,7 +60,7 @@ html {
     flex-direction: row;
     justify-content: end;
     column-gap: 16px;
-    width: 100%;
+    width: 90%;
 }
 
 .navigationMenu li {
