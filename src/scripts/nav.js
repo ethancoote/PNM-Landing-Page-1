@@ -2,13 +2,13 @@
 let burgerBtn = document.querySelector("#hamburger");
 let burgerMenu = document.querySelector(".mobileMenu");
 let burgerMenuButtons = document.querySelectorAll("a");
-const menuClosePosition = "-400px";
+const menuClosePosition = "-500px";
 
 // open & close mobile navigation
 let menuOpen = false;
 burgerBtn.addEventListener("click", function () {
     if (!menuOpen) {
-        burgerMenu.style.top = "80px";
+        burgerMenu.style.top = "0px";
         burgerBtn.style.backgroundPosition = "center left 50px, center";
         menuOpen = true;
     } 

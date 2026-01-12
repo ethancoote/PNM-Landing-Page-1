@@ -1,15 +1,16 @@
 :root {
-    --max-width: 1400px;
-    --border-radius: 16px;
+    --max-width: 1500px;
+    --border-radius: 24px;
     --primary-color: #ff6123;
     --primary-dark: #e25118;
-    --primary-darkest: #c74a19;
+    --primary-darkest: hsl(17, 78%, 44%);
     --secondary-color: #f0581c;
     --secondary-hover:#fcfcff;
-    --off-black:hsl(24, 29%, 10%);
+    --off-black:hsl(17, 9%, 10%);
+    --background: hsl(17, 9%, 15%);
     --off-white:hsl(36, 100%, 99%);
     --off-gray: hsl(12, 33%, 95%);
-    --black-tint: hsla(0, 0%, 0%, .05);
+    --black-tint: hsla(0, 0%, 0%, .15);
 }
 
 html {
@@ -27,15 +28,18 @@ html {
     height: fit-content;
     align-items: center;
     justify-content: center;
-    background-color: var(--off-white);
-    scroll-margin-top: 80px;
+    background-color: var(--background);
+    color:white;
+    scroll-margin-top: 0px;
 }
 
 .normalSection.hero {
     min-height: 100vh;
-    background-color: var(--off-white);
     padding: 32px 0px;
     padding-top: 80px;
+    justify-content: end;
+    background-color: #0000;
+    perspective: 1px;
 }
 
 /*NAV BAR*/
@@ -48,7 +52,7 @@ html {
     height: 80px;
     padding: 0px 32px;
     z-index: 10;
-    max-width: var(--max-width);
+    max-width: auto;
 }
 
 .navigationMenu {
@@ -63,11 +67,11 @@ html {
     padding: 4px 12px;
     cursor:pointer;
     transition: .3s;
-    color: black;
+    color: white;
 }
 
 .navigationMenu li:hover {
-    color: hsla(0, 0%, 0%, .5);
+    color: hsla(0, 0%, 100%, .5);
 }
 
 .logoDiv {
@@ -114,25 +118,20 @@ html {
 #navMobile {
     display: none;
     justify-content: center;
-    position:fixed;
-    border-bottom: solid 1px hsla(0, 0%, 0%, .1);
+    position:absolute;
     height:fit-content;
-    background-color: var(--off-white);
     width:100%;
     z-index:12;
 }
 #navDesktop {
     display: flex;
     justify-content: center;
-    position:fixed;
-    border-bottom: solid 1px hsla(0, 0%, 0%, .07);
+    position:absolute;
     height:fit-content;
     width:100%;
     z-index:10;
-    background-color: var(--off-white);
-    box-shadow: 0px 5px 16px hsla(0, 0%, 0%, .05);
 }
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:950px) {
     #navDesktop {
         display:none;
     }
@@ -145,10 +144,11 @@ html {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top:-400px;
+    top:-500px;
     left: 0;
     right:0;
-    background-color: var(--off-white);
+    background-color: hsla(0, 0%, 0%, .6);
+    backdrop-filter: blur(10px);
     height: fit-content;
     justify-content: center;
     align-items: center;
@@ -156,8 +156,8 @@ html {
     z-index: 9;
     row-gap: 24px;
     padding: 32px 0px;
+    padding-top: 120px;
     transition: .5s ease-in-out;
-    border-bottom: solid 1px hsla(0, 0%, 0%, .2);
 }
 
 .mobileMenu ul {
@@ -192,9 +192,28 @@ html {
     padding: 64px 32px;
     z-index: 1;
 }
+.container.hero {
+    justify-content: start;
+    align-items: start;
+    max-width: none;
+    padding-bottom: 8px;
+}
+.bgImgDark {
+    position:absolute;
+    background-image: linear-gradient(to right, hsla(0, 0%, 0%, .7), hsla(0, 0%, 0%, .7), hsla(0, 0%, 0%, .4), hsla(0, 0%, 0%, 0));
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    z-index: 0;
+}
+
 @media only screen and (max-width:600px) {
     .container {
         padding: 48px 12px;
+    }
+    .bgImgDark {
+        background-image: linear-gradient(to top, hsla(0, 0%, 0%, .7), hsla(0, 0%, 0%, .4));
     }
 }
 @media only screen and (max-width:900px) {
@@ -221,22 +240,29 @@ html {
 
 .box.hero {
     width: 100%;
+    max-width: 600px;
     text-wrap: balance;
-    text-align: start;   
+    text-align: start;
+    justify-self: end;
 }
 @media only screen and (max-width:900px) {
     .box.hero {
         row-gap: 16px;
-        text-align: center;
     }
     .normalSection.hero {
         min-height: 100vh;
         height: fit-content;
-        justify-content: end;
+        justify-content: center;
         padding-bottom: 0px;
     }
     .normalSection.hero .container {
         padding-bottom: 32px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .box.hero {
+        text-align: center;
     }
 }
 
@@ -248,6 +274,31 @@ html {
     left: 0;
     right:0;
     z-index: 0;
+}
+
+.bgImg {
+    position:absolute;
+    background-image: url("/images/hero.webp");
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    z-index: 0;
+    animation: parallax linear;
+    animation-timeline: scroll();
+    background-size: cover;
+}
+
+@media only screen and (max-width: 1200px) {
+    .bgImg {
+        background-image: url("/images/tablet/hero.webp");
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .bgImg {
+        background-image: url("/images/mobile/hero.webp");
+    }
 }
 
 .container.fill {
@@ -263,6 +314,13 @@ html {
 .grid {
     display: grid;
     grid-template-columns: 32% 32% 32%;
+    width: 100%;
+    column-gap: 32px;
+    max-width: var(--max-width);
+}
+.fourGrid {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
 }
 @media only screen and (max-width: 900px) {
     .container.fill {
@@ -270,6 +328,9 @@ html {
     }
     .grid {
         grid-template-columns: 47% 47%;
+    }
+    .fourGrid {
+        grid-template-columns: 48% 48%;
     }
 }
 
@@ -303,14 +364,22 @@ html {
     .grid {
         grid-template-columns: 100%;
     }
+    .fourGrid {
+        grid-template-columns: 100%;
+    }
 }
 
-
+@keyframes parallax {
+    to {
+       transform: translateY(2000px); 
+    }
+}
 
 .divider {
-    height: 1px;
+    height: 2px;
     width: 100%;
-    background-color: hsla(0, 0%, 0%, .3);
+    background-color: hsla(0, 0%, 100%, .5);
+    max-width: 110px;
 }
 
 
@@ -329,6 +398,10 @@ html {
 
 .tag.visCenter {
     padding: 4px 20px 4px 4px;
+}
+
+.tag.opaque {
+    background-color: hsla(0, 0%, 0%, .35);
 }
 
 /*COMMANDS*/
@@ -402,6 +475,15 @@ html {
 .lightPaddingBot {
     padding-bottom: 20px;
 }
+
+.largePaddingTop {
+    padding-top: 48px;
+}
+
+.largePaddingBot {
+    padding-bottom: 48px;
+}
+
 .box.fill.card.lightPaddingTop {
     padding-top: 20px;
 }
@@ -442,6 +524,9 @@ html {
 .box.fill.card.apart {
     justify-content: space-between;
 }
+.borderRound {
+    border-radius: var(--border-radius);
+}
 
 
 
@@ -466,7 +551,7 @@ html {
 }
 
 .limit {
-    max-width: 900px;
+    max-width: 1000px;
     text-wrap:balance;
 }
 
@@ -504,12 +589,7 @@ html {
         row-gap: 8px;
         column-gap: 8px;
     }
-    .centerMobile {
-        justify-content: center;
-        align-items: center;
-        justify-self: center;
-        align-self: center;
-    }
+    
     .max80 {
         max-width: 100%;
     }
@@ -524,8 +604,19 @@ html {
     }
 }
 
+@media only screen and (max-width:600px) {
+    .centerMobile {
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        align-self: center;
+    }
+
+}
+
 .darkBack {
-    background-color: var(--black-tint);
+    
+    background-image: linear-gradient(var(--black-tint));
 }
 .lightBack {
     background-color: hsla(0, 0%, 100%, .3);
@@ -546,6 +637,7 @@ html {
     justify-content: space-between;
 }
 
+
 /*BUTTONS AND ANCHORS*/
 .button {
     display: flex;
@@ -562,23 +654,22 @@ html {
     border-radius: var(--border-radius);
     border: solid 2px var(--secondary-color);
 }
-@media only screen and (max-width: 900px) {
-    .button {
-        width: 100%;
-    }
-}
 
 @media only screen and (max-width: 600px) {
     .mobileHide {
         display: none;
     }
+    .button {
+        width: 100%;
+    }
 }
 
 .button:hover {
-    background-color: var(--secondary-hover);
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+    background-color: hsla(0, 0%, 100%, .9);
+    border-color: hsla(0, 0%, 100%, .0);
+    color: black;
     cursor: pointer;
+    box-shadow: 0px 5px 16px hsla(0, 0%, 100%, .15);
 }
 
 .button .svgArrow {
@@ -588,29 +679,36 @@ html {
 }
 
 .button:hover .svgArrow {
-    fill: var(--primary-color);
+    fill: black;
     transform: rotate(-45deg);
 }
 
-.button.main {
-    box-shadow: 0px 5px 16px hsla(0, 0%, 0%, .1);
-}
-
 .button.secondary {
-    color:var(--primary-color);
+    color:white;
     background-color: #0000;
-    border: solid 2px var(--primary-color);
+    border: solid 2px var(--off-white);
 }
 
 .button.secondary:hover {
+    background-color: hsla(0, 0%, 100%, .2);
+    box-shadow: 0px 5px 16px hsla(0, 0%, 100%, .15)
+}
+
+.button.white {
+    background-color: var(--off-white);
+    border-color: var(--off-white);
+    color: black;
+    
+}
+
+.button.white:hover {
+    color: hsla(0, 0%, 0%, .5);
     background-color: white;
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    box-shadow: 0px 5px 16px hsla(0, 0%, 0%, .1)
+    box-shadow: 0px 10px 30px hsla(22, 100%, 80%, 0.15), 0px 4px 8px hsla(27, 100%, 75%, 0.3) ;
 }
 
 .button.secondary .svgArrow {
-    fill: var(--primary-color);
+    fill: white;
 }
 
 .button.fill {
@@ -650,6 +748,11 @@ a:hover {
     object-fit: cover;
 }
 
+.threeByFour {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
 .square {
     aspect-ratio: 1/1;
     object-fit: cover;
@@ -672,7 +775,7 @@ a:hover {
 .iconLarge {
     height: 72px;
     width: 72px;
-    background-color: var(--off-gray);
+    background-color: hsla(0, 0%, 100%, .2);
     padding:6px;
     border-radius: 100px;
     aspect-ratio: 1;
@@ -682,14 +785,27 @@ a:hover {
     .iconLarge {
         height: 58px;
         width: 58px;
+        padding: 4px;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .iconLarge {
+        height: 48px;
+        width: 48px
     }
 }
 
 .mainIcon {
     height:84px;
     width: 84px;
-    object-fit: contain;
+    object-fit: cover;
     aspect-ratio: 1;
+    background-color: hsla(0, 0%, 0%, .2);
+    padding: 6px;
+    overflow: visible;
+    border-radius: 100px;
+    border: solid 1px hsla(0, 0%, 100%, .2)
 }
 
 .iconSmall {
@@ -751,9 +867,9 @@ a:hover {
 /*FORM*/
 .inputBox {
     font-size: 1.6rem;
-    background-color: hsla(0, 0%, 0%, .08);
-    border: 1px solid hsla(0,0%,0%, .1);
-    padding: 12px;
+    background-color: hsla(0, 0%, 0%, .4);
+    border: 1px solid hsla(0,0%,100%, .3);
+    padding: 12px 16px;
     border-radius: var(--border-radius);
     width: 100%;
     margin-bottom: 16px;
@@ -777,13 +893,13 @@ select {
 .checkBox {
     height: 16px;
     width: 16px;
-    border: 1px solid hsla(0,0%,0%, .3);
+    border: 1px solid hsla(0,0%, 100%, .3);
     margin-top: 6px;
     margin-left: 4px;
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: hsla(0, 0%, 0%, .05);
+    background-color: hsla(0, 0%, 0%, .5);
     border-radius: 4px;
 }
 
@@ -812,7 +928,7 @@ label {
 }
 
 .link:hover {
-    color: var(--off-black);
+    color: var(--off-white);
 }
 
 /*FOOTER*/
@@ -887,7 +1003,7 @@ summary {
 }
 
 details {
-    border-bottom: solid 1px hsla(0, 0%, 0%, .1);
+    border-bottom: solid 1px hsla(0, 0%, 100%, .3);
 }
 
 summary:hover {

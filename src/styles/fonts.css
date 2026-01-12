@@ -14,81 +14,92 @@
 }
 
 h1 {
-    font-size: 5.8rem;
+    font-size: 7.5rem;
     font-weight: 600;
-    line-height: 6.4rem;
+    line-height: 8.3rem;
 }
-
 
 h2 {
-    font-size: 4.2rem;
-    font-weight: 600;
-    line-height: 4.8rem;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 6.5rem;
 }
 .h2 {
-    font-size: 4.2rem;
-    font-weight: 600;
-    line-height: 4.8rem;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 6.5rem;
 }
 h3 {
-    font-size: 3.5rem;
-    font-weight: 600;
-    line-height: 4.5rem;
+    font-size: 5.5rem;
+    font-weight: 400;
+    line-height: 6.2rem;
 }
 .h3 {
-    font-size: 3.5rem;
-    font-weight: 600;
-    line-height: 4.5rem;
+    font-size: 5.5rem;
+    font-weight: 400;
+    line-height: 6.2rem;
 }
 h4 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    line-height: 3rem;
+    font-size: 3.3rem;
+    font-weight: 400;
+    line-height: 4rem;
 }
 .h4 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    line-height: 3rem;
+    font-size: 3.3rem;
+    font-weight: 400;
+    line-height: 4rem;
+}
+.cursiveHead {
+    font-family: 'Style Script'; 
+    font-weight:400;
+    font-size: 8.5rem; 
+    line-height: 10rem;
 }
 
 @media only screen and (max-width: 1200px) {
     h1 {
-        font-size: 4.8rem;
-        line-height: 5.0rem;
+        font-size: 7rem;
+        line-height: 7.5rem;
     }
 }
 @media only screen and (max-width:600px) {
     h1 {
         font-size: 5.3rem;
-        line-height: 5.5rem;
+        line-height: 6rem;
     }
     h2 {
-        font-size: 3.5rem;
-        line-height: 4rem;
+        font-size: 4.2rem;
+        line-height: 5rem;
     }
     h3 {
-        font-size: 3rem;
-        line-height: 3.8rem;
+        font-size: 4rem;
+        line-height: 4.7rem;
     }
     .h2 {
-        font-size: 3.5rem;
-        line-height: 4.5rem;
+        font-size: 4.2rem;
+        line-height: 5rem;
     }
     .h3 {
-        font-size: 3rem;
-        line-height: 3.5rem;
+        font-size: 4rem;
+        line-height: 4.7rem;
+    }
+    .cursiveHead {
+        font-size: 6rem;
+        line-height: 6.5rem;
     }
 
 }
 
 p {
-    font-size: 1.8rem;
-    line-height: 2.9rem;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    font-weight: 300;
 }
 
 .p {
-    font-size: 1.8rem;
-    line-height: 2.9rem;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    font-weight: 300;
 }
 
 
@@ -103,7 +114,7 @@ b {
 }
 
 .pSmall {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
 }
 
 .pTiny {
@@ -122,7 +133,7 @@ i {
 }
 
 .subtextWhite {
-    color: hsla(0, 0%, 100%, .7);
+    color: hsla(0, 0%, 100%, .8);
 }
 
 .subtextBlack {
@@ -134,7 +145,7 @@ i {
 }
 
 .thin {
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .color {
@@ -153,3 +164,24 @@ i {
 .balance {
     text-wrap: balance;
 }
+
+.underline {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
+.underline::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 12px;
+    background-image: url('/images/line.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40px;
+}
+
