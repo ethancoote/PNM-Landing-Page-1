@@ -66,7 +66,7 @@ import ServiceCard from '../components/ServiceCard.astro';
             s0.parentNode.insertBefore(s1,s0);
             })();
         </script>
-<!--End of Tawk.to Script-->
+        <!--End of Tawk.to Script-->
 	</head>
 	<body>
 
@@ -456,8 +456,6 @@ import ServiceCard from '../components/ServiceCard.astro';
         
     </section>
 
-
-
 	<!-- FAQ -->
 	<section class="normalSection closeish">
 		<div class="container noPaddingBot">
@@ -537,12 +535,6 @@ import ServiceCard from '../components/ServiceCard.astro';
                     <img id="localImg" class="normalImg threeByFour" src="images/interior-house-white-paint.webp" alt="Freshly painted house interior" loading="lazy">
                 </picture>
             </div>
-            <!--div class="box">
-                <picture>
-                    <source srcset="images/mobile/off-white-new-living-room.webp" media="(min-width: 0px) and (max-width: 480px)">
-                    <img class="normalImg threeByFour" src="images/off-white-new-living-room.webp" alt="white new painted kitchen" loading="lazy">
-                </picture>
-            </div-->
             <div class="box">
                 <picture>
                     <source srcset="images/mobile/living-room-white.webp" media="(min-width: 0px) and (max-width: 480px)">
@@ -565,9 +557,10 @@ import ServiceCard from '../components/ServiceCard.astro';
         </div>
         <div class="container noPaddingTop">
             <div class="box">
-                <h3>Get Your Free Quote Today!</h3>
-                <p>Tell us about your project, and we'll get back to you with a free quote. We look forward to working with you.</p>
-                <form class="box closer" action="https://formsubmit.co/013156e829aadb58d778adcecfdb1fbd" method="POST">
+                <!--h3>Get Your Free Quote Today!</h3>
+                <p>Tell us about your project, and we'll get back to you with a free quote. We look forward to working with you.</p-->
+                <iframe class="frame" src="https://paintersnearme.dripjobs.com/AppointmentRequests?companyId=115390944193539fceb6ce4833b3b4&formId=77855299558004e0440b3e40c8b338" width="100%" height="800px" title="Painters Near Me Contact Form"></iframe>
+                <!--form class="box closer" action="https://formsubmit.co/013156e829aadb58d778adcecfdb1fbd" method="POST">
                     <div class="box across close">
                         <div class="box closest">
                             <label for="name"><p>Name *</p></label>
@@ -615,9 +608,9 @@ import ServiceCard from '../components/ServiceCard.astro';
                         <a class="link" href="https://www.paintersnear-me.com/privacy-policy"><p class="pSmall">Privacy Policy</p></a>
                     </div>
                     
-                </form>
+                </form-->
             </div>
-            <div class="box close">
+            <div class="box close" id="contactReviews">
                 <div class="box close centerMobile across apart endAlign">
                     <GoogleReviews />
                     <div class="box close centerMobile shrink endAlign">
@@ -639,6 +632,13 @@ import ServiceCard from '../components/ServiceCard.astro';
                         body="This was a job very well done. Professional, clean and polite. No Mess left behind for me to clean up. I would definitely recommend Painters Near Me, to my family and friends." 
                         name="Susan Whiteford"/>
             </div>
+            <style>
+                #contactReviews {
+                    align-self:stretch; 
+                    height: auto; 
+                    justify-content: end;
+                }
+            </style>
         </div>
     </section>
 	<Footer />

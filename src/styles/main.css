@@ -382,7 +382,12 @@ html {
     max-width: 110px;
 }
 
-
+.fullDivider {
+    height: 2px;
+    width: 90%;
+    background-color: hsla(0, 0%, 100%, .5);
+    max-width: 100%;
+}
 
 .tag {
     background-color: var(--off-white);
@@ -402,6 +407,18 @@ html {
 
 .tag.opaque {
     background-color: hsla(0, 0%, 0%, .35);
+}
+
+.frame {
+    border-radius: var(--border-radius);
+    border: 2px solid hsla(0, 0%, 0%, .5)
+}
+
+@media only screen and (max-width:600px) {
+    .frame {
+        height: 2100px;
+        overflow: clip;
+    } 
 }
 
 /*COMMANDS*/
