@@ -1,0 +1,26 @@
+---
+import FiveStars from '../components/FiveStars.astro';
+const {head, body, name} = Astro.props;
+---
+
+<div class="box fill card close outline lightPaddingBot apart stretch" id="reviewCard">
+    <div class="box close">
+        <h4 class="noBalance">{head}</h4>
+        <p class="pSmall noBalance">{body}</p>
+    </div>
+    <div class="box acrossTrue apart close ">
+        <img class="icon" src="images/googleLogo.webp" alt="Google Logo">
+        <div class="box shrink">
+            <div class="box closest shrink endAlign">
+                <FiveStars />
+                <p><i>- {name}</i></p>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #reviewCard {
+        background-color: var(--background);
+        border: solid 1px hsla(0, 0%, 100%, .7);
+    }
+</style>

@@ -1,0 +1,56 @@
+---
+import '../styles/reset.css';
+import '../styles/main.css';
+import '../styles/fonts.css';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+//import Gtag from "../components/Gtag.astro";
+//import Heatmap from "../components/Heatmap.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="../images/logo.webp" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Painters Near Me 404 Error Page.">
+		<title>404</title>
+		<style>
+			@font-face {
+				font-display: swap;
+				font-family: 'Manrope';
+				font-style: normal;
+				font-weight: 400;
+				src: url('/fonts/manrope-v20-latin-regular.woff2') format('woff2');
+			}
+			@font-face {
+				font-display: swap;
+				font-family: 'Manrope';
+				font-style: normal;
+				font-weight: 700;
+				src: url('/fonts/manrope-v20-latin-700.woff2') format('woff2');
+			}
+    	</style>
+		<!--Gtag />
+		<Heatmap /-->
+	</head>
+	<body>
+
+	<Header />
+
+	<main class="normalSection" style="min-height: 100vh;">
+        <div class="container">
+        <di class="box center">
+            <div class="box center limit close">
+                <h1>404</h1>
+				<p class="pLarge">Oops... Page Not Found.</p>
+                <p>The page you're looking for doesn't exist, or has been moved.</p>
+                <a href="/" class="button main"><p>Return Home</p></a>
+            </div>
+        </div> 
+    </main>
+
+	<Footer />
+	</body>
+</html>

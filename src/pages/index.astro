@@ -1,16 +1,586 @@
 ---
-
+import '../styles/reset.css';
+import '../styles/main.css';
+import '../styles/fonts.css';
+import '../styles/portfolio.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FiveStars from '../components/FiveStars.astro';
+import GoogleReviews from '../components/GoogleReviews.astro';
+import ReviewCard from '../components/ReviewCard.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Popup from '../components/Popup.astro';
+//import Heatmap from "../components/Heatmap.astro";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/images/logo.webp" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+        <meta name="description" content="Trusted painters in Niagara and Oakville Ontario.">
+		<title>Painters Near Me</title>
+		<style>
+
+			@font-face {
+				font-display: swap;
+				font-family: 'Manrope';
+				font-style: normal;
+				font-weight: 300;
+				src: url('/fonts/manrope-v20-latin-300.woff2') format('woff2');
+			}
+            @font-face {
+				font-display: swap;
+				font-family: 'Manrope';
+				font-style: normal;
+				font-weight: 400;
+				src: url('/fonts/manrope-v20-latin-regular.woff2') format('woff2');
+			}
+			@font-face {
+				font-display: swap;
+				font-family: 'Manrope';
+				font-style: normal;
+				font-weight: 700;
+				src: url('/fonts/manrope-v20-latin-700.woff2') format('woff2');
+			}
+    	</style>
+
+        <!--Gtag />
+        <Heatmap /-->
 	</head>
 	<body>
-		<h1>Astro</h1>
+
+	<Header />
+
+	<!--HERO-->
+    <main id="home" class="normalSection hero">
+        <div class="bgImg"></div>
+        <div class="bgImgDark"></div>
+        <div class="container hero ">
+            <div class="box hero">
+            
+                <GoogleReviews />
+                <h1 id="headline" class="white">Trusted Interior Painters in Niagara Falls</h1>
+                <p id="subHeadline" class="subtextWhite balance">Refresh your home with our top-rated interior painting services. Experienced, reliable, and meticulously clean. Get your free quote today!</p>
+                <div id="heroButtons" class="box across close mobile8Gap">
+                    <a href="/#contact" class="button main"><p class="buttonText">Get Your Free Quote</p>
+                        <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svgArrow" d="M18.7071 8.07107C19.0976 7.68055 19.0976 7.04739 18.7071 6.65686L12.3431 0.2929C11.9526 -0.0976242 11.3195 -0.0976242 10.9289 0.2929C10.5384 0.683424 10.5384 1.31659 10.9289 1.70711L16.5858 7.36397L10.9289 13.0208C10.5384 13.4113 10.5384 14.0445 10.9289 14.435C11.3195 14.8256 11.9526 14.8256 12.3431 14.435L18.7071 8.07107ZM0 7.36397L0 8.36397L18 8.36397V7.36397V6.36397L0 6.36397L0 7.36397Z"/></svg>
+                    </a>
+                    <a href="#learn" class="button secondary"><p class="buttonText">Learn More</p>
+                        <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svgArrow" d="M18.7071 8.07107C19.0976 7.68055 19.0976 7.04739 18.7071 6.65686L12.3431 0.2929C11.9526 -0.0976242 11.3195 -0.0976242 10.9289 0.2929C10.5384 0.683424 10.5384 1.31659 10.9289 1.70711L16.5858 7.36397L10.9289 13.0208C10.5384 13.4113 10.5384 14.0445 10.9289 14.435C11.3195 14.8256 11.9526 14.8256 12.3431 14.435L18.7071 8.07107ZM0 7.36397L0 8.36397L18 8.36397V7.36397V6.36397L0 6.36397L0 7.36397Z"/></svg>
+                    </a>
+                </div>
+                <div id="tagsDesktop" class="box close centerMobile across">
+                    <div class="box acrossTrue closer centerAlign tag opaque shrink visCenter">
+                        <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32">
+                        <p class="subtextWhite">2-Year Warranty</p>
+                    </div>
+                    <div class="box acrossTrue closer centerAlign tag opaque shrink visCenter">
+                        <img class="iconSmall" src="images/check.svg" alt="checkmark icon" width="32" height="32">
+                        <p class="subtextWhite">Free Estimates</p>
+                    </div>
+                </div>
+            </div>
+            <!--div class="box closer center">
+                <picture>
+                    <source srcset="images/mobile/off-white-new-kitchen.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img class="normalImg heroImage1" src="images/off-white-new-kitchen.webp" alt="a living room with fresh white paint" fetchpriority="high" loading="eager">
+                </picture>
+
+            </div-->
+            <div id="tagsMobile" class="box close centerMobile across">
+                    <div class="box acrossTrue closer centerAlign tag opaque shrink visCenter">
+                        <img class="iconSmall" src="images/check.svg" alt="checkmark icon">
+                        <p class="subtextWhite">2-Year Warranty</p>
+                    </div>
+                    <div class="box acrossTrue closer centerAlign tag opaque shrink visCenter">
+                        <img class="iconSmall" src="images/check.svg" alt="checkmark icon" >
+                        <p class="subtextWhite">Free Estimates</p>
+                    </div>
+                </div>
+        </div>
+		<style>
+			@media only screen and (max-width: 900px){
+				#tagsDesktop {
+					display: none;
+				}
+                #tagsMobile {
+                    display: flex;
+                }
+                #headline {
+                    text-wrap: balance;
+                }
+                
+			}
+            @media only screen and (min-width: 901px) {
+                #tagsDesktop {
+					display: flex;
+				}
+                #tagsMobile {
+                    display: none;
+                }
+            }
+            @media only screen and (max-width: 1020px) {
+                #heroButtons {
+                    flex-direction: column;
+                }
+            }
+            @media only screen and (max-width: 1120px) {
+                .heroImage1 {
+                    max-width: 100%;
+                    border-radius: var(--border-radius);
+                }
+            }
+			
+		</style>
+    </main>
+
+    <!--CTA-->
+    <section class="normalSection closest darkBack">
+        <div class="container">
+            <div class="box center noPaddingTop">
+                
+                <div class="box center limit">
+                    <div class="square iconWrap">
+                        <img class="mainIcon" src="/images/logo.webp" alt="painters near me logo">
+                    </div>
+                    
+                    <div class="box closer">
+                        <h2>Elevate Your Space </h2>
+                        <h3 class="h2 ">With <span class="underline">Top-Quality </span> Interior Painters</h3>
+                    </div>
+                    
+                    <p>Your home deserves more than just a new colour. It deserves to be treated with top-quality products for a beautiful, lasting finish. At <b>Painters Near Me</b>, we make your home feel brand-new again.</p>
+                    <div class="box across center close">
+                        <a href="/#contact" class="button white"><p class="buttonText">Get a Free Quote</p></a>
+                        <a href="tel:+19059310863" class="button secondary"><p class="buttonText">905-931-0863</p></a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="container noPaddingTop noPaddingBot limit500">
+            <div class="divider"></div>
+        </div>
+        
+    </section>
+
+    <!--Section 1-->
+    <section class="normalSection darkBack" id="learn">
+        <div class="container">
+            <div class="box">
+                <picture>
+                    <source srcset="images/mobile/painted-living-room.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img class="normalImg threeByFour" src="images/painted-living-room.webp" alt="white painted basement" loading="lazy">
+                </picture>
+            </div>
+            <div class="box">
+                <h3>One-Stop Shop for Interior Home Improvement</h3>
+                <div class="box text">
+                    <p>Interior painting doesn’t stop at your walls. At <b>Painters Near Me</b>, we specialize in walls, ceilings, trim, doors, and cabinetry. All your home improvement needs in one place.</p>
+                    <p>Each project is done with care, and a great attention to detail. We provide consultation, planning, preparations, and organization, all while keeping your home meticulously clean. <b>Give your home a new, refreshing look that you will love!</b></p>
+                </div>
+                <a class="button secondary" href="/#contact"><p class="buttonText">Get in Touch</p></a>
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <!--Section 2-->
+    <section class="normalSection closest">
+        <div class="container mobileFlip" >
+            <div class="box">
+                <h3>Why Choose a Local Expert?</h3>
+                <div class="box text">
+                    <p>Hiring a local painter is more than just a convenience. It means working with trusted experts from your community. </p>
+                    <p>At <b>Painters Near Me</b>, we understand the Niagara Region community standards. We are a team of experienced, reliable, and detail oriented professional painters. We bring a top-quality, personal touch to your home.</p>
+                </div>
+                <a class="button secondary" href="/#contact"><p class="buttonText">Get Your Free Quote</p></a>
+            </div>
+            <div class="box" >
+                <picture>
+                    <source srcset="images/mobile/bright-living-room.webp" media="(max-width:480px)">
+                    <img id="localImg" class="normalImg threeByFour" src="images/bright-living-room.webp" alt="Freshly painted house interior" loading="lazy">
+                </picture>
+            </div>
+            
+        </div>
+        <style>
+            #localImg {
+                object-position: 0% 80%; 
+            }
+        </style>  
+    </section> 
+
+    <!--Values -->
+    <section class="normalSection close" id="valuesSection">
+        <div id="valuesImg"></div>
+        <div class="container fill limit" id="values">
+            <div class="box center noPaddingTop">
+                
+                <div class="box center limit close" id="limitBox">
+                    <div class="square iconWrap">
+                        <img class="mainIcon" src="/images/logo.webp" alt="painters near me logo">
+                    </div>
+                    <div class="box">
+                        <h3 class="h2 "> <span class="underline">Our Values</span></h3>
+                        <h2 class="h4">The Painters Near Me Core Values</h2>
+                    </div><br>
+                    <div class="box close">
+                        <p><b>Your Experience is Our Reputation</b></p>
+                        <p>Every decision, detail, and interaction reflects who we are. We earn trust through how we make customers feel through our interactions.</p>
+                    </div><br>
+                    <div class="box close">
+                        <p><b>Relentless in Detail and Efficiency</b></p>
+                        <p>We move fast, work smart, and never compromise on precision. Dare to be Bold. </p>
+                    </div><br>
+                    
+                    <div class="box close">
+                        <p><b>We Paint, We Play, and We Grow</b></p>
+                        <p>We bring passion and pride to our craft celebrate the process, and push ourselves and each other to keep evolving</p>
+                    </div><br>
+                    <div class="box across center close">
+                        <a href="/#contact" class="button white"><p class="buttonText">Get a Free Quote</p></a>
+                        <a href="tel:+19059310863" class="button secondary"><p class="buttonText">905-931-0863</p></a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <!--div class="container fourGrid closeish">
+            <div class="box">
+                <picture>
+                    <source srcset="images/mobile/white-painted-basement.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img class="normalImg threeByFour" src="images/white-painted-basement.webp" alt="white painted basement" loading="lazy">
+                </picture>
+            </div>
+            <div class="box">
+                <picture>
+                    <source srcset="images/mobile/interior-house-white-paint.webp" media="(max-width:480px)">
+                    <img id="localImg" class="normalImg threeByFour" src="images/interior-house-white-paint.webp" alt="Freshly painted house interior" loading="lazy">
+                </picture>
+            </div>
+            <div class="box">
+                <picture>
+                    <source srcset="images/mobile/off-white-new-living-room.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img class="normalImg threeByFour" src="images/off-white-new-living-room.webp" alt="white new painted kitchen" loading="lazy">
+                </picture>
+            </div>
+            <div class="box">
+                <picture>
+                    <source srcset="images/mobile/living-room-white.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img class="normalImg threeByFour" src="images/living-room-white.webp" alt="white painted living room" loading="lazy">
+                </picture>
+            </div>
+        </div-->
+        <style>
+            #values {
+                background-color: var(--background);
+            }
+            @media only screen and (max-width:1000px) {
+                #values {
+                    max-width:95%;
+                }
+            }
+            @media only screen and (max-width:900px) {
+                #limitBox {
+                    text-wrap: auto;
+                }
+            }
+            #valuesImg {
+                position:absolute;
+                background-image: url("/images/background.webp");
+                filter: brightness(85%);
+                top: -170px;
+                bottom: 0;
+                left: 0;
+                right:0;
+                z-index: -1;
+                animation: parallax linear;
+                animation-timeline: view();
+                background-size: cover;
+                animation-range: entry 50% cover 400%;
+            }
+            @media onyl screen and (max-width: 1200px) {
+                #valuesImg {
+                    background-image: url("/images/tablet/background.webp");
+                }
+            }
+            @media onyl screen and (max-width: 600px) {
+                #valuesImg {
+                    background-image: url("/images/mobile/background.webp");
+                }
+            }
+            #valuesSection {
+                background-color: #0000;
+            }
+        </style>
+    </section>
+
+    <!-- Services -->
+    <section class="normalSection" id="services">
+        <div class="container noPaddingBot">
+            <div class="box center limit">
+                <h2 class="pSmall thin tag opaque subtextWhite">Services</h2>
+                <h3>Our Interior Services</h3>
+                <p>At <b>Painters Near Me</b>, we provide a wide range of top-quality interior services.</p>
+            </div>
+        </div>
+        <div class="container grid noPaddingTop noPaddingBot">
+            <ServiceCard head="Full Home Interior Repaints"
+                         body="A well-loved home can look and feel just as amazing as something brand new. Whether you have loved the home for years, or you are finding that fresh start, a full interior paint can help make all the difference."
+                         alt="repaint icon"
+                         src="/images/paintbrush.svg"
+                         link="https://www.paintersnear-me.com/interior-painting"/>
+            <ServiceCard head="Accent Walls"
+                         body="Do you ever feel like your home just needs a little bit of spice? An accent wall may be just the way to do it. Choosing the right colour, paired with clean cuts, Painters Near Me will create the accent wall of your dreams."
+                         alt="accent walls icon"
+                         src="/images/wall.svg"
+                         link="https://www.paintersnear-me.com/interior-painting"/>
+            <ServiceCard head="Ceilings, Trim & Baseboards"
+                         body="Sometimes ceilings show signs of wear, and baseboards represent all the running around you do. Painters Near Me is here to let you continue your busy life, while putting trust in professionals to bring you back to a new, refreshing home!"
+                         alt="baseboards icon"
+                         src="/images/sparkle.svg"
+                         link="https://www.paintersnear-me.com/interior-painting"/>
+            <ServiceCard head="Surface Prep"
+                         body="Painters Near Me will handle all necessary drywall repairs, filling gaps, smoothing out rough textures, and adding high-quality primers to create strong paint adhesion and a smooth finish."
+                         alt="surface prep icon"
+                         src="/images/check.svg"
+                         link="https://www.paintersnear-me.com/interior-painting"/>
+            <ServiceCard head="Kitchen & Bathroom Painting"
+                         body="Meals, routines, and memories – the places you spend time in daily. Kitchens and bathrooms require extra special care, creating results meant to last. At Painters Near Me we use quality products to ensure just that."
+                         alt="kitchen and bathroom icon"
+                         src="/images/fridge.svg"
+                         link="https://www.paintersnear-me.com/interior-painting"/>
+            <ServiceCard head="Quick Turnovers"
+                         body="Although precision takes time, your next steps matter to us. We provide efficient painting services for new homeowners making a big move, or sellers looking to refresh their home before putting it on the market."
+                         alt="quick turnovers icon"
+                         src="/images/speed.svg"
+                         link="https://www.paintersnear-me.com/interior-painting"/>
+        </div>
+        <div class="container noPaddingTop">
+            <a class="button main" href="/#contact"><p class="buttonText">Get Your Free Quote Today!</p></a>
+        </div>
+    </section>
+
+    <!--Testimonials -->
+    <section class="normalSection close darkBack" id="testimonials">
+        <div class="container noPaddingBot">
+            <div class="box center closish">
+                <GoogleReviews />
+                <div class="box close">
+                    <h3 class="h2">Don't Take Our Word For It</h3>
+                    <p>See what our happy customers had to say.</p>
+                </div>
+                
+            </div>
+        </div>     
+        <div class="container close noPaddingBot lightPaddingTop">
+            <ReviewCard head="What an outstanding job!"
+                        body="Thanks to Austin, Dan and the entire Painters Near Me team. You all worked diligently, carefully, cleanly and clearly take pride in your craft. Thank you for doing a wonderful job. It was a pleasure dealing with you from the moment Max first spoke to me about you. Your honesty and professionalism are a credit to yourselves and your company." 
+                        name="Lorne Lipkus"/>
+            <ReviewCard head="Highly recommended!"
+                        body="I recently hired Painters Near Me to paint my townhouse, and I couldn't be happier with the results! From the initial consultation to the final walkthrough, their professionalism and attention to detail were outstanding. The team was punctual, respectful of my home, and clearly take pride in their work." 
+                        name="Melanie Vautour"/>
+        </div>
+        <div class="container close noPaddingTop lightPaddingBot">
+            <ReviewCard head="Thank you for an amazing job."
+                        body="Austin and his team were amazing. I absolutely love the job they did if I could give 10 star I would !!! Thank you for an amazing job." 
+                        name="Kim Muro"/>
+            <ReviewCard head="Professional, clean and polite."
+                        body="This was a job very well done. Professional, clean and polite. No Mess left behind for me to clean up. I would definitely recommend Painters Near Me, to my family and friends." 
+                        name="Susan Whiteford"/>
+            <ReviewCard head="I highly recommend this company."
+                        body="Austin was knowledgeable and very helpful with decisions and the price was within my budget. Great experience! Don't go anywhere else for your painting needs!" 
+                        name="Diane Sinclair"/>
+        </div>
+        <div class="container noPaddingTop">
+            <div class="box center across close">
+                <a class="button white" href="https://www.google.com/localservices/profile?spp=Cg0vZy8xMXgwbXRyeW45&source=sh%2Fx%2Floc%2Fsrv%2Fm1%2F0&kgs=0c70fa0a8efd8e90" target="_blank"><p class="buttonText">Read More Reviews</p></a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--ABOUT-->
+    <section id="about" class="normalSection closer">
+        <div class="container lightPaddingBot">
+            <div class="box center"><h2 class="pSmall thin tag opaque subtextWhite">About</h2></div>
+            
+        </div>
+        <div class="container apart lightPaddingTop lightPaddingBot">
+            <div class="box">
+                <picture >
+                    <source srcset="images/mobile/about.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img  class="normalImg fourByThree" src="images/about.webp" alt="Painters Near Me about photo" loading="lazy" id="profileImg">
+                </picture>
+                
+            </div>
+            <div class="box closer">
+                <h3>Painters Near Me</h3>
+                <h4 class="pLarge thin">Trusted Painters in Niagara Falls</h4><br>
+                
+                <div class="box text">
+                    <p>At <b>Painters Near Me</b> we exist to create lasting impressions - on walls, homes, and people. Our focus is on your experience, from start to finish and the human/technological interactions in between them.</p>
+                    <p>When you become a part of our journey, you are joining a long lasting community that is here to service all your painting needs - from exterior to interior to all of our specialist services. <b>Painters Near Me is the team you want to hire! </b></p>
+                    
+                    <div class="box acrossTrue">
+                        <img class="iconLarge square" src="/images/google-guarantee.webp" alt="google guarantee logo">
+                        <img class="iconLarge square" src="/images/locally-owned.webp" alt="locally owned logo">
+                        <img class="iconLarge square" src="/images/ben-moore.webp" alt="benjamin moore logo">
+                        <img class="iconLarge square" src="/images/sherwin-williams.webp" alt="sherwin williams logo">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+	<!-- FAQ -->
+	<section class="normalSection closeish">
+		<div class="container noPaddingBot">
+            <div class="box center"><h2 class="pSmall thin tag opaque subtextWhite">FAQs</h2></div>
+        </div>
+		<div class="container noPaddingTop noPaddingBot">
+			<div class="box center">
+				<h3 class="h2">Frequently Asked Questions</h3>
+			</div>
+		</div>
+		<div class="container lightPaddingTop top mobile8Gap">
+			<div class="box closer">
+                <details name="accordion1">
+					<summary class="box acrossTrue apart">
+						<p class="pLarge white">What areas do you service?</p>
+					</summary>
+					<div class="answer">
+						<p class="subtextWhite">We proudly serve Niagara - GTA, including surrounding communities. Contact us to see if we work in your area!</p>
+					</div>
+				</details>
+				<details name="accordion1">
+					<summary class="box acrossTrue apart">
+						<p class="pLarge white">How long will my project take?</p>
+					</summary>
+					<div class="answer">
+						<p class="subtextWhite">Most jobs are completed within a few days, depending on size and scope. We’ll provide a clear timeline before starting.</p>
+					</div>
+				</details>
+                <details name="accordion1">
+					<summary class="box acrossTrue apart">
+						<p class="pLarge white">Are you insured and licensed?</p>
+					</summary>
+					<div class="answer">
+						<p class="subtextWhite">Yes, we are fully insured and licensed, so you can have peace of mind during your project.</p>
+					</div>
+				</details>
+				
+			</div>
+			<div class="box closer">
+				<details name="accordion2">
+					<summary class="box acrossTrue apart">
+						<p class="pLarge white">Do you offer a warranty on your work?</p>
+					</summary>
+					<div class="answer">
+						<p class="subtextWhite">Yes! We stand behind our work with a 2 year warranty on workmanship and materials.</p>
+					</div>
+				</details>
+				<details name="accordion2">
+					<summary class="box acrossTrue apart">
+						<p class="pLarge white">How do I get an estimate?</p>
+					</summary>
+					<div class="answer">
+						<p class="subtextWhite">Simply fill out our online form, give us a call, or email us—estimates are always free and no obligation.</p>
+					</div>
+				</details>
+                <details name="accordion2">
+					<summary class="box acrossTrue apart">
+						<p class="pLarge white">What forms of payment do you accept?</p>
+					</summary>
+					<div class="answer">
+						<p class="subtextWhite">We accept e-transfers, credit cards, cheques, and cash.</p>
+					</div>
+				</details>
+			</div>
+            
+		</div>
+        <div class="container grid closeish noPaddingTop lightPaddingBot">
+            <div class="box">
+                <picture>
+                    <source srcset="images/mobile/white-painted-basement.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img class="normalImg threeByFour" src="images/white-painted-basement.webp" alt="white painted basement" loading="lazy">
+                </picture>
+            </div>
+            <div class="box">
+                <picture>
+                    <source srcset="images/mobile/interior-house-white-paint.webp" media="(max-width:480px)">
+                    <img id="localImg" class="normalImg threeByFour" src="images/interior-house-white-paint.webp" alt="Freshly painted house interior" loading="lazy">
+                </picture>
+            </div>
+            <div class="box">
+                <picture>
+                    <source srcset="images/mobile/living-room-white.webp" media="(min-width: 0px) and (max-width: 480px)">
+                    <img class="normalImg threeByFour" src="images/living-room-white.webp" alt="white painted living room" loading="lazy">
+                </picture>
+            </div>
+        </div>
+        <div class="container noPaddingTop">
+            <div class="box center">
+                <a class="button secondary" href="https://www.paintersnear-me.com/our-work" target="_blank"><p class="buttonText">See More Work</p></a>
+            </div>
+        </div>
+        <br>
+	</section>
+
+    <!--CONTACT-->
+    <section id="contact" class="normalSection close darkBack">
+        <div class="container lightPaddingBot">
+            <div class="box center"><h2 class="pSmall thin tag opaque subtextWhite ">Contact</h2></div>
+        </div>
+        <div class="container noPaddingTop">
+            <ContactForm />
+            
+            <div class="box close" id="contactReviews">
+                <div class="box close centerMobile across apart endAlign">
+                    <GoogleReviews />
+                    <div class="box close centerMobile shrink endAlign">
+                        <div class="box acrossTrue closer centerAlign tag opaque shrink visCenter">
+                            <img width="32" height="32" class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p class="subtextWhite">2-Year Warranty</p>
+                        </div>
+                        <div class="box acrossTrue closer centerAlign tag opaque shrink visCenter">
+                            <img width="32" height="32" class="iconSmall" src="images/check.svg" alt="checkmark icon" loading="lazy">
+                            <p class="subtextWhite">Free Estimates</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="box close">
+                    <ReviewCard head="What an outstanding job!"
+                        body="Thanks to Austin, Dan and the entire Painters Near Me team. You all worked diligently, carefully, cleanly and clearly take pride in your craft. Thank you for doing a wonderful job. It was a pleasure dealing with you from the moment Max first spoke to me about you. Your honesty and professionalism are a credit to yourselves and your company." 
+                        name="Lorne Lipkus"/>
+                    <ReviewCard head="Highly recommended!"
+                        body="I recently hired Painters Near Me to paint my townhouse, and I couldn't be happier with the results! From the initial consultation to the final walkthrough, their professionalism and attention to detail were outstanding. The team was punctual, respectful of my home, and clearly take pride in their work." 
+                        name="Melanie Vautour"/>
+                </div>
+                
+            </div>
+            <style>
+                #contactReviews {
+                    align-self:stretch; 
+                    height: auto; 
+                    justify-content: end;
+                }
+            </style>
+        </div>
+    </section>
+	<Footer />
+    <Popup />
+    
 	</body>
 </html>

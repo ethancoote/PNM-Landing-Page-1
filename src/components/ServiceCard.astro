@@ -1,0 +1,26 @@
+---
+const {src, head, body, alt, link} = Astro.props;
+---
+
+<a href={link} class="box close center" id="serviceCard">
+    <div class="square iconWrap">
+        <img class="iconLarge square" id="serviceIcon" src={src} alt={alt} loading="lazy">
+    </div>
+    
+    <h4>{head}</h4>
+    <p class="subtextWhite">{body}</p>
+</a>
+<style>
+    #serviceIcon {
+        background-color: #0000;
+        border-radius: 0px;
+        padding:0px;
+    }
+    #serviceCard {
+        margin: 12px 0px;
+        align-self: start;
+        max-width: 95%;
+        justify-self: center;
+    }
+    
+</style>

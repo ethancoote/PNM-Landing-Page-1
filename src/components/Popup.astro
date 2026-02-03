@@ -1,0 +1,80 @@
+<div id="popupBackground">
+    <div class="box close" id="popup">
+        <div class="box center closeish">
+            <div class="square iconWrap">
+                <img class="mainIcon" src="/images/logo.webp" alt="painters near me logo">
+            </div>
+            <h3>Make Your Home Feel New Again!</h3>
+            <p>If you want to refresh your home, then we're here to help! Our team of professional painters will make your home look brand-new again.</p>
+            <a class="button main closePopup" href="/#contact"><p class="buttonText">Get Your Free Quote!</p></a>
+        </div>
+        <div id="close" class="closePopup">
+            <img src="/images/close.svg" alt="close popup Icon">
+        </div>
+        
+    </div>
+</div>
+
+
+<style>
+    #popup {
+        position: fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        background-color: hsl(17, 9%, 15%);
+        z-index: 10;
+        width: 90%;
+        max-width: 700px;
+        padding: 32px;
+        color: var(--off-white);
+        border-radius: var(--border-radius);
+        border: 1px solid hsla(0, 0%, 100%, 0.3);
+    }
+
+    #close {
+        position: absolute;
+        display:flex;
+        top: 24px;
+        right: 24px;
+        height:24px;
+        width:24px;
+        transition: 0.3s;
+        z-index:11;
+    }
+
+    #close:hover {
+        opacity: 50%;
+        cursor: pointer;
+    }
+
+    #close img {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    h3 {
+        font-size: 5.4rem;
+        line-height: 6rem;
+    }
+
+    #popupBackground {
+        top:0;
+        left:0;
+        bottom: 0;
+        right:0;
+        position:fixed;
+        background-color: hsla(0, 0%, 0%, 0.5);
+        z-index: 10;
+        display:none;
+    }
+
+    @media only screen and (max-width: 600px) {
+        h3 {
+            font-size: 3.8rem;
+            line-height: 4.5rem;
+        }
+    }
+</style>
+
+<script src="../scripts/popup.js"></script>

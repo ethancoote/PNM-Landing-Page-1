@@ -1,0 +1,84 @@
+.portfolioItem {
+    transition: 0.3s;
+    position: relative;
+}
+
+.portfolioItem:hover {
+    cursor: pointer;
+}
+
+.hoverTextBox {
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    border-radius: var(--border-radius);
+}
+
+.hoverTextBox:hover {
+    opacity: 100;
+    background-color: hsla(0, 0%, 0%, 0.6);
+}
+
+.hoverText {
+    position: relative;
+    top: 40%;
+
+}
+
+.relative {
+    position: relative;
+}
+
+.lightbox {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 0%, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+#lightboxImg {
+    object-fit: cover;
+    height: 90%;
+    min-width: 350px;
+    object-position: top;
+    border-radius: var(--border-radius);
+}
+
+#lightboxClose {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    transition: 0.3s;
+}
+
+#lightboxClose:hover {
+    cursor: pointer;
+    filter: brightness(70%);
+}
+
+@media only screen and (max-width: 600px) {
+    #lightboxImg {
+        min-width: auto;
+        width: 70%;
+        height: 85%;
+    }
+
+    #lightboxClose {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+.picture {
+    padding: 0px;
+}
